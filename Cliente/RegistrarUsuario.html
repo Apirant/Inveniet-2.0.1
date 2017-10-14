@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Registrar Usuario</title>
+
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="CSS/contenedores.css">
+			<link rel="stylesheet" href="CSS/slider.css">
+			<link rel="stylesheet" href="CSS/Navegacion.css">
+			<link rel="stylesheet" href="CSS/social.css">
+			<link rel="stylesheet" href="CSS/Formas.css">
+			<link rel="stylesheet" href="CSS/Formulario.css">
+			<link rel="stylesheet" href="CSS/VentanaModal.css">
+
+			<!-- Cargo VueJS -->
+			<link rel="stylesheet" type="text/css" href="vue.min.js">
+
+			<script src="https://unpkg.com/vue"></script>
+
+			<!-- Boostrap -->
+			<link href="CSS/boostrap/bootstrap.css" rel="stylesheet">
+			
+			<!--Flat-UI-->
+			<link rel="stylesheet" href="CSS/Flat-UI/dist/css/flat-ui.min.css">
+
+	</head>
+
+
+
+	<body>
+
+	<div  class="container" style="background: white;">
+
+		<!-- Barra de navegación -->
+				<nav class="row" align="left" style="background: white; border: solid 1px #E9E9E9;">
+					
+					<!-- Logo -->
+				
+						<div class="col-md-1" style="margin-left: -20px;"> </div>
+
+						<div class="col-md-1" align="center">
+							<img src="img/logo.png" class="img-responsive" style="width: 40px; height: 60px;" >	
+						</div>
+
+						<div class="col-md-1" align="center" style="text-align: right; ">
+							<h5 style="text-align: center;" >Inveniet</h5>
+						</div>
+						
+						<div class="col-md-1"></div>
+
+					<!-- Barra de Búsqueda -->
+						<div class="col-lg-5">
+							<p>  </p>
+								<div class="input-group input-group-sm input-group-rounded" style="border-radius: 10px;">
+									<input type="text" class="form-control" style="text-align: center" placeholder="Ej. nombre del producto" id="barra1">
+
+									<span class="input-group-btn ">
+											<a type="submit" class="btn" href="BuscarProductos.html"><span class="fui-search"></span></a>
+										</span>
+								</div>
+
+							</div>
+
+					<!-- Botones de Logeo -->
+						<div class="col-lg-3" align="center">
+							<p> </p>
+
+							<!-- Aplicación de ingreso de sesión -->
+
+								<div id="Ingresar"  class="col-lg-5">
+
+									<a id="show-modal1" @click="showModal1 = true" type="button" class="Btn-p" style="margin-right: 20px;">Ingresar</a>
+
+									<ingresar v-if="showModal1" @close="showModal1 = false">
+									    <h5 slot="header">
+									    	
+									    	<div class="col-md-3" align="right">
+									    		<img src="img/logo.png" class="img-responsive" style="width: 20px; height: 30px;">
+									    	</div>
+
+									    	<div class="col-md-8" align="left">
+									    		<h5 style="color: black;">Inveniet</h5>
+									    		
+									    	</div>
+									    	
+									    	</h5> 
+									</ingresar>
+
+									</div>
+							
+							<!-- Aplicación de selección de cuenta -->
+
+								<div id="Registrar" class="col-lg-5">
+
+									<a id="show-modal" @click="showModal = true" type="button" class="Btn-p" style="margin-right: 20px;">Registrarse</a>
+
+									<modal v-if="showModal" @close="showModal = false">
+									    <h5 slot="header">
+									    	
+									    	<div class="col-md-3" align="right">
+									    		<img src="img/logo.png" class="img-responsive" style="width: 20px; height: 30px;">
+									    	</div>
+
+									    	<div class="col-md-8" align="left">
+									    		<h5 style="color: black;">Inveniet</h5>
+									    		
+									    	</div>
+									    	
+									    	</h5> 
+									</modal>
+
+									
+									</div>
+							
+						</div>
+
+				<p>  </p>
+
+				</nav>
+
+		<!-- Identificador -->
+			<div class="row" style="height: 30px; background: #01474F; color: white;">
+					<p align="center" style="margin-top: 1px; font-size: 18px;">Registrar Usuario</p>
+			</div>
+			
+		<!--Formularios -->	
+
+			<form class="row" action="/regu" method="post" autocomplete="on">
+				
+				<div class="col-md-1"> </div>
+
+
+				<div class="col-md-5" >
+
+						<div class="separador-top-sm"></div>
+						
+					<span class="sub " align="left">Datos Personales:</span>
+							
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="text" id="nombre" placeholder="Nombre" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+					<div class="row" align="center">
+						<div class="col-lg-10">
+							<input type="text" id="apellido" placeholder="Apellido" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+										<div class="row">
+						<div class="col-lg-10">
+
+							<div class="input-group">
+							  <input type="text" id="correo" class="form-control" placeholder="Email" />
+							  <span class="input-group-addon">@gmail.com</span>
+							</div>
+
+						</div>
+					</div>
+					
+							<div class="separador-top-sm"></div>
+							
+					<span class="sub " align="left">Datos de la Cuenta:</span>
+					
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="text" id="nombreUsuario" placeholder="Nombre de Usuario" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="password" id="contrasena" placeholder="Contraseña" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+	
+
+				</div>
+
+
+				<div class="col-md-5">
+
+						<div class="separador-top-sm"></div>
+
+					<span class="sub" style="text-align: right">Verificación de seguridad:</span>
+							
+						<div class="separador-top-sm"></div>
+						
+						<div class="row" align="center">
+
+						<div class="col-md-1"> </div>
+
+
+							<div class="col-lg-10">
+
+								<div class="col-lg-20  codigoQR" align="center" style="height: 400px;">
+									recaptcha
+								</div>
+									
+										<div class="separador-top-sm"></div>
+
+								<!-- Boton de registrar -->
+
+									<div class="row " align="center">
+
+										<button href="RegSeleccionar.html" class="btn btn-hg btn-primary btn-R" style="height: 40px; width: 380px; background: #09B62D; color: white; font-size: 16px; margin-top: 5px;">
+										  Registrar
+										</button>
+
+									</div>
+						
+								</div>
+						</div>
+
+
+					</div>	
+
+			</form>
+
+		<div class="separador-top-sm" style="margin-bottom: -80px"></div>
+
+		<!-- Lista de derechos de autor -->
+			<div class="row"  align="center">
+
+				<div style="background: #08292F; color: white; text-align: center; ">
+					<span>Todos los derechos reservados</span>
+				</div>
+				
+			</div>
+
+	</div>
+
+
+	</body>
+
+<!-- Ventana Ingresar -->
+	<!-- Ventana Modal (ingresar) codigo fuente  -->
+
+		<script type="text/x-template" id="Ingresar-Ventana">
+
+		  <transition name="modal">
+		    <div class="modal-mask">
+		      <div class="modal-wrapper">
+		        <div class="modal-container">
+
+		          <div class="modal-header">
+		            <slot name="header">
+		              	Inveniet
+		            </slot>
+		          </div>
+
+		          <div class="modal-body">
+		            <slot name="body">
+		            	<input type="text" placeholder="Correo electrónico" class="input-lg form-control" style="margin-bottom: 15px;" />
+		            	<input type="password" placeholder="Contraseña" class="input-lg form-control" />
+		            </slot>
+		          </div>
+
+		          <div class="modal-footer">
+		            <slot name="footer">
+
+		            	<div class="row" align="center">
+
+		            		<div class="col-md-4" align="left">
+		            			<button class="Btn-p" @click="$emit('close')" href="principal.html">Salir</button>
+		            		</div>
+
+
+		            		<div class="col-md-8" align="right">
+		            			<a type="button" class="Btn-p" href="PaginaPrincipal.html">Iniciar Secsión</a>
+		            		</div>
+		            		
+		            		
+		            	</div>
+
+		            </slot>
+		          </div>
+
+
+
+		        </div>
+		      </div>
+		    </div>
+		  </transition>
+
+		</script>
+
+	<!-- Aplicación con Vuejs para la ventana (ingresar) -->
+
+		<script type="text/javascript">
+
+		Vue.component('ingresar', {
+		  template: '#Ingresar-Ventana'
+		})
+
+		new Vue({
+		  el:'#Ingresar',
+		  data: {
+		    showModal1: false
+		  }
+		})
+
+		</script>
+
+
+<!-- Ventana Registrar -->
+	<!-- Ventana Modal (Registrar) codigo fuente  -->
+
+		<script type="text/x-template" id="Registrar-Ventana">
+
+		  <transition name="modal">
+		    <div class="modal-mask">
+		      <div class="modal-wrapper">
+		        <div class="modal-container">
+
+		          <div class="modal-header">
+		            <slot name="header">
+		              	Inveniet
+		            </slot>
+		          </div>
+
+		          <div class="modal-body">
+		            <slot name="body">
+
+		            	<div class="row" id="tipo-cuenta">
+
+		            		<a href="RegistrarLocal.html" id="tienda" class="col-md-5 Btn-p2 " onclick="Tcuenta(tienda)" style="margin-right: 20px; margin-left: 10px; background: white; text-align: center;">
+		            			<img src="img/tienda-icono.png" class="img-responsive" alt="">
+		            			Tienda
+		            		</a>
+
+		            		<a href="RegistrarUsuario.html" id="usuario" class="col-md-5 Btn-p2 " style="background: white; text-align: center;">
+		            			<img src="img/user-icono.png" class="img-responsive" onmouseover="alert('entraste en el area del contenedor') alt="">
+		            			Usuario
+		            		</a>		            		
+		            		
+		            	</div>
+		            	
+		            </slot>
+		          </div>
+
+		          <div class="modal-footer">
+		            <slot name="footer">
+
+		            	<div class="row" align="center">
+		            		<button class="Btn-p" @click="$emit('close')" href="principal.html">regresar</button>
+		            	</div>
+
+		            </slot>
+		          </div>
+
+
+
+		        </div>
+		      </div>
+		    </div>
+		  </transition>
+
+		</script>
+
+	<!-- Aplicación con Vuejs para la ventana (ingresar) -->
+		<script type="text/javascript">
+
+		Vue.component('modal', {
+		  template: '#Registrar-Ventana'
+		})
+
+		new Vue({
+		  el:'#Registrar',
+		  data: {
+		    showModal: false
+		  }
+		})
+
+		</script>
+
+
+
+</html>

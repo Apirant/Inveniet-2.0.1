@@ -1,0 +1,145 @@
+extends encabezado.jade
+block contenido
+      
+      // Eslogan de la pagina
+      .row(style='height: 30px; background: #01474F; color: white;')
+        p(align='center', style='margin-top: 1px; font-size: 16px;') Los productos que necesitas donde y cuando los necesita, todo al alcance de tus manos
+
+      // Cuerpo de productos
+      .row
+        // Columna izquierda
+        .col-lg-7.col-xs-10
+          .separador-top-sm
+          .col-md-2.col-xs-2
+          // Carrucel
+          .col-md-10.col-xs-10(align='center', style='border: solid 1px #DCDCDC;')
+            .owl-carousel.owl-theme.owl-animated
+              .item
+                img.img-responsive(src='img/cereal.jpg', style='height: 300px; width: 300px; align-content: center;', align='center')
+              .item
+                img.img-responsive(src='img/idp/Heladodetoddy.jpg', style='height: 300px; width: 400px; align-content: center;')
+              .item
+                img.img-responsive(src='img/idp/cocosete.jpeg', style='height: 300px; width: 400px; align-content: center;')
+              .item
+                img.img-responsive(src='img/idp/oreo.jpg', style='height: 300px; width: 400px; align-content: center;')
+        
+
+
+        // Columna derecha
+        .col-lg-5.col-xs-10
+          .separador-top-sm
+          .row
+            p   
+            .col-md-1.col-xs-2
+            .col-md-9.col-xs-10(style='background: white; border: solid 1px #CCCCCC; border-radius: 10px; font-size: 15px;', align='center')
+              span Mas populares
+            .col-md-1.col-xs-1
+          .separador-top-sm
+          .row(style='margin-top: 8px;', align='center')
+            .col-md-1.col-xs-3
+            .col-md-4.col-xs-4(style='margin-right: 8px;', align='center')
+              li.Product(style='width: 190px; height: 240px;', align='center')
+                figure.imghvr-push-up
+                  img.img-responsive(src='img/idp/twistos.jpg', style='width: 190px; height: 230px;')
+                  figcaption
+                    | Esto es cereal
+                  a(href='#')
+            .col-md-5.col-xs-4(style='margin-right: 5px;', align='center')
+              li.Product(style='width: 160px; height: 120px;', align='center')
+                figure.imghvr-push-up
+                  img.img-responsive(src='img/idp/Jugodepinia.jpg', style='width: 150px; height: 110px;')
+                  figcaption
+                    | Esto es cereal
+                  a(href='#')
+              li.Product(style='width: 160px; height: 120px;', align='center')
+                figure.imghvr-push-up
+                  img.img-responsive(src='img/idp/comboParmalat.jpg', style='width: 150px; height: 110px;')
+                  figcaption
+                    | Esto es cereal
+                  a(href='#')
+      .separador-top-sm
+     
+
+      // Lista de productos
+      .row(style='margin-left: 180px; margin-bottom: 30px; margin-top: 30px' align="center")
+        .owl-carousel.owl-theme
+          ul.col-md-12.col-xs-8( align="center")
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img.img-responsive(src='img/idp/galletamaria.gif', style='width: 100px; height: 100px; ')
+                figcaption
+                  | Esto es cereal 1
+                a(href='#')
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img.img-responsive(src='img/idp/Harinapan.jpg', style='width: 100px; height: 100px;')
+                figcaption
+                  | Esto es cereal 2
+                a(href='#')
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img.img-responsive(src='img/idp/Harinadetrigo.jpeg', style='width: 100px; height: 100px;')
+                figcaption
+                  | Esto es cereal 3
+                a(href='#')
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img(src='img/idp/Toddy.jpg', style='width: 100px; height: 100px;')
+                figcaption
+                  | Esto es cereal 4
+                a(href='#')
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img(src='img/idp/Zucaritas.jpg', style='width: 100px; height: 100px;')
+                figcaption
+                  | Esto es cereal 5
+                a(href='#')
+            li.Product.item(style='width: 108px; height: 105px; margin-right: 20px; margin-bottom: 10px;', align='center')
+              figure.imghvr-push-up
+                img(src='img/idp/cafe.jpg', style='width: 100px; height: 100px;')
+                figcaption
+                  | Esto es cereal 6
+                a(href='#')
+
+
+      // Lista de Botones sociales
+      .row
+        .col-lg-3.col-xs-2
+        .col-md-6.col-xs-6(align='center', style='margin-top: 2px; margin-bottom: 30px; margin-left: 45px;')
+          .separador-top-sm
+          .col-md-3.col-xs-3
+            .social-button.facebook.fa(style='border: solid 1px #3B5998;')
+              .fa(style='margin-top: 10px;') f
+          .col-md-3.col-xs-3
+            .social-button.twitter.fa(style='border: solid 1px #3CF;')
+              .fa(style='margin-top: 10px;') t
+          .col-md-3.col-xs-3
+            .social-button.google.fa(style='border: solid 1px #DC4A38;')
+              .fa(style='margin-top: 8px;') g
+          .col-md-3.col-xs-3
+            .social-button.dribbble.fa(style='border: solid 1px #9E6102;')
+              .fa(style='margin-top: 10px;') I
+        .separador-top-sm
+        .col-lg-3.col-xs-3
+
+
+      // Lista de derechos de autor
+      .row(align='center')
+        div(style='background: #08292F; color: white; text-align: center; ')
+          span Todos los derechos reservados
+        
+
+      // Animaciones para el Carrucel de productos
+      script(type='text/javascript').
+          var owl = $('.owl-carousel');
+          owl.owlCarousel({
+          items:1,
+          loop:true,
+          margin:1,
+          autoplay:true,
+          autoplayTimeout:3000,
+          autoplayHoverPause:true
+          });
+          $('.play').on('auto',function(){
+          owl.trigger('play.owl.autoplay',[3000])
+          })

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Perfil del Local</title>
+
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="CSS/contenedores.css">
+			<link rel="stylesheet" href="CSS/slider.css">
+			<link rel="stylesheet" href="CSS/Navegacion.css">
+			<link rel="stylesheet" href="CSS/social.css">
+			<link rel="stylesheet" href="CSS/Formas.css">
+			<link rel="stylesheet" href="CSS/Formulario.css">
+
+			<!-- Cargo VueJS -->
+			<link rel="stylesheet" type="text/css" href="vue.min.js">
+
+			<script src="https://unpkg.com/vue"></script>
+
+			<!-- Boostrap -->
+			<link href="CSS/boostrap/bootstrap.css" rel="stylesheet">
+			
+			<!--Flat-UI-->
+			<link rel="stylesheet" href="CSS/Flat-UI/dist/css/flat-ui.min.css">
+
+	</head>
+
+	<body>
+
+	<div class="container">
+
+		<div class="separador-sm"></div>
+
+		<!-- Barra de navegación -->
+				<nav class="row" align="left" style="background: white; border: solid 1px #E9E9E9;">
+					
+					<!-- Logo -->
+				
+						<div class="col-md-1" style="margin-left: -20px;"> </div>
+
+						<div class="col-md-1" align="center">
+							<img src="img/logoFinal.png" class="img-responsive" style="width: 40px; height: 60px;" >	
+						</div>
+
+						<div class="col-md-1" align="center" style="text-align: right; ">
+							<h5 style="text-align: center;" >Inveniet</h5>
+						</div>
+						
+						<div class="col-md-1"></div>
+
+					<!-- Barra de Búsqueda -->
+						<div class="col-lg-5">
+							<p>  </p>
+								<div class="input-group input-group-sm input-group-rounded" style="border-radius: 10px;">
+
+										<span class="input-group-btn ">
+											<a type="submit" class="btn" href="BuscarP.html"><span class="fui-search"></span></a>
+										</span>
+
+									<input type="text" class="form-control" placeholder="Ej. nombre del producto" id="barra1">
+								</div>
+
+							</div>
+
+				<!-- botones de cuenta -->
+
+					<!-- Cuenta de usuario -->
+						<div class="col-lg-3" align="center">
+
+							<div class="col-md-6 ">
+								<p> </p>
+								<a type="button" class="Btn-user" href="perfil.html" id="cuenta">Nombre_Cuenta</a>
+							</div>
+
+								
+
+							<div class="col-md-3"> 
+								<div class="circulo" style=" width: 40px ; height: 40px; border: solid 2px #05B120; margin-top: 10px;">
+									<img src="img/Imag.png" class="img-responsive" >
+								</div>
+
+							</div>
+						</div>
+
+					</nav>
+
+		<!-- Identificador -->
+			<div class="row" style="height: 30px; background: #01474F; color: white;">
+					<p align="center" style="margin-top: 1px; font-size: 18px;">Perfil del Local</p>
+			</div>
+		
+		<!-- Columnas --> 
+
+			<div class="row">
+	
+				<!-- separador --> <div class="col-md-1"> </div>
+
+				<!-- Columna Izquierda--> 
+
+					<div class="col-md-5">
+				
+						<div class="separador-top-sm"></div>
+
+						<!-- Titulo del la columna-->
+							<div class="row" align="left">
+
+								<div class="col-md-6">
+									<span class="sub" align="left">Datos de la Cuenta:</span>
+								</div>
+
+								<div class="col-md-4">
+
+									<span class="form-control" style="color: #B8B8B8;">Reputación 0</span>
+
+								</div>
+							</div>
+
+							<div class="separador-top-sm"></div>
+
+						<!-- Elementos del la columna-->
+							
+							<div class="row" align="right">
+								<p> </p>
+								<div class="col-lg-10">
+									<input type="text" placeholder="Nombre del local" class="input-lg form-control" />
+								</div>
+							</div>
+
+						<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+								<div class="col-lg-10">
+									<input type="text" placeholder="Nº de Registro Fiscal" class="input-lg form-control" />
+								</div>
+							</div>
+
+						<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+								<div class="col-lg-10">
+									<input type="text" placeholder="Compañía" class="input-lg form-control" />
+								</div>
+							</div>	
+
+						<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+								<div class="col-lg-10">
+									<div class="input-group">
+									  <input type="text" class="form-control" placeholder="Tipo de Local" />
+									  <span class="input-group-addon">\/</span>
+									</div>
+								</div>
+							</div>	
+
+						<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+								<div class="col-lg-10">
+									<div class="input-group">
+									  <input type="text" class="form-control" placeholder="Email" />
+									  <span class="input-group-addon">@ gmail.com</span>
+									</div>
+								</div>
+							</div>	
+
+						<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+
+								<div class="col-md-4">
+									<input type="text" placeholder="Contraseña" class="input-lg form-control" />
+								</div>
+
+								<div class="col-md-6">
+									<input type="text" placeholder="Numero de Telefono" class="input-lg form-control" />
+								</div>	
+
+							</div>	
+
+							<div class="separador-top-sm"></div>							
+					</div>
+				
+				<!--Columna Derecha-->
+
+					<div class="col-md-6">
+
+						<div class="separador-top-sm"></div>
+
+						<!-- Titulo del la columna-->
+							<div class="row">
+
+								<div class="col-md-7">
+									<span class="sub" align="left">Información de contacto:</span>
+								</div>
+
+							</div>
+
+							<div class="separador-top-sm"></div>
+
+							<div class="row" align="right">
+								<div class="col-md-10">
+									<input type="text" placeholder="Dirección Final" class="input-lg form-control" />
+								</div>
+							</div>
+
+							<div class="separador-top-sm"></div>
+
+							<div class="row">
+								
+								<div class="col-lg-10">
+									<div class="col-lg-20  Gmaps" align="center" style="height: 300px; background: #1C5674;">
+										<img src="img/logo-circle-XS.png"  style="margin-top: 10px;">
+									</div>
+
+									<p>  </p>
+								</div>
+							</div>	
+
+							
+							<!-- Botones -->
+
+								<div class="row" align="center">
+
+							             <button type="button"  class="Btn-user btn-md" style="width: 400px; margin-left: -100px;">
+												<input type="file" id="Imagen_Subir" name="Cargar Imagen">
+							              </button>
+
+							              <p> </p>
+								</div>
+
+								<div class="row">
+							              <button type="button" style="width: 100px;" class="Btn-p">Salir</button>
+
+										<button type="button" style="width: 200px;" class="Btn-p">Publicar Productos</button>
+
+							            <button type="button" style="width: 150px;" class="Btn-p">Guardar Cambios</button> 
+						         
+								</div>
+
+
+					</div>
+			</div>
+
+		<!-- Tabla de productos publicados -->
+
+				<div class="row">
+					<!-- separador --> <div class="col-md-1"> </div>
+
+								<div class="col-md-10">
+								
+									<div class="row">
+
+										<div class="col-md-7" >
+											<span class="sub" align="left">Productos Publicados:</span>
+										</div>
+
+										<p>  </p>
+									
+									</div>
+
+									<p>  </p>
+
+									<div class="table-responsive" align="center">
+									  <table class="table table-condensed table-hover table-bordered">
+									    	<thead style="background: #1C5674;  color: white;">
+									    		<tr>
+										    		<th>Nombre</th>
+											        <th>Tiempo Publicado</th>
+											        <th>Editar</th>
+										        </tr>
+									    	</thead>
+											
+											<tbody style="background: #F1F1F1; color: black; text-align: center">
+												<tr>
+													<td>
+														<p id="Nombre">{Nombre}</p>
+													</td>
+
+													<td>
+														<p id="T_pub">{T_pub}</p>
+													</td>
+
+													<td>
+														<a href="#" id="Datos">{Editar}</a>
+													</td>
+
+												</tr>
+
+												<tr>
+													<td>
+														<p id="Nombre">{Nombre}</p>
+													</td>
+
+													<td>
+														<p id="T_pub">{T_pub}</p>
+													</td>
+
+													<td>
+														<a href="#" id="Datos">{Editar}</a>
+													</td>
+
+												</tr>
+
+											</tbody>
+
+									  </table>
+									</div>
+
+								</div>
+
+						<div class="separador-top-sm"></div>
+
+					</div>			
+
+
+
+
+		<!-- Lista de derechos de autor -->
+			<div class="row"  align="center">
+
+				<div style="background: #08292F; color: white; text-align: center; margin-left: 10px;">
+					<span>Todos los derechos reservados</span>
+				</div>
+				
+
+			</div>
+
+
+	</div>
+
+	</body>
+
+</html>

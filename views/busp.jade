@@ -1,0 +1,40 @@
+extends encabezado.jade
+block contenido
+
+			// Identificador
+			.row(style='height: 30px; background: #08292F;  color: white;')
+				p(align='center', style='margin-top: 1px; font-size: 18px;') Resultados para:   #{Texto}
+
+
+			// Barra de Filtros
+				p    
+				.nav-container(style="")
+					.row(align='center')
+						.filter-container
+							button.filter-btn(type='button')
+								| Recientes
+							button.filter-btn(type='button')
+								| Mejor Calificados
+							button.filter-btn(type='button')
+								| Más Cercanos
+							button.filter-btn.filter-left(type='button')
+								| Más Visitados
+
+
+			// Contenedor de Productos
+			.container(align='center', style="margin-top: 20px;")
+				if(encontrado!=false) 
+					each product in products
+						.col-md-3.col-xs-5
+							li.Product(style="margin-top: 20px; width: 230px; height: 240px;")
+									figure.imghvr-push-up
+										img.img-responsive(src='iproductos/#{product.img}', style="width: 600px; height: 200px;")
+										figcaption
+											h6()=product.nombre
+											h7()=product.descripcion
+										//form(action="/producto/search", method='get', autocompleted="off")
+										a(href='/producto?id=#{product.id}', name='id', method='get')
+									h8 Publicado hace 45 min
+
+				else
+					span(style='font-size: 20px; color:#B3B3B3;' align='center') No se ha encontrado productos

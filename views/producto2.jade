@@ -1,0 +1,232 @@
+extends encabezado.jade
+block contenido
+     
+  // Identificador
+  .row(style='height: 30px; background: #08292F;  color: white;')
+    p(align='center', style='margin-top: 1px; font-size: 18px;') Datos del Producto
+  
+
+
+
+
+  // Datos del producto
+  .row
+    .col-md-1  
+    
+
+
+
+    // Columna izquierda
+    .col-md-5(style='margin-left: 20px;')
+      .separador-top-sm
+      p(align='left', style='margin-top: 5px; font-size: 18px;') Información del producto:
+      .separador-top-sm
+      .row
+        .col-md-7
+          img.img-responsive(src='iproductos/#{dp.img}', style='height: 230px')
+        .col-md-5
+            
+          span.form-control(style='margin-top: 12px;') #{dp.nombre}
+            
+          span.form-control(style='margin-top: 12px;') BF. #{dp.precio}
+            
+          span.form-control(style='margin-top: 12px;') #{dl.nombre}
+            
+          span.form-control(style='margin-top: 12px;') #{dl.tipo}
+          
+      p   
+      .row
+        .col-md-12
+          .separador-top-sm
+          span.form-control #{dp.descripcion}
+      .row
+        .separador-top-sm
+        .col-md-5
+          span.form-control Reputacion: #{dl.reputacion}
+        .separador-top-sm
+        .col-md-7
+          span.form-control Publicado hace: XX min
+      .row
+        .separador-top-sm
+        .col-md-5(align='left')
+          a.btn.btn-sm.btn-primary(type='buttom', href='/busp?texto=#{dp.nombre}', style='width: 180px; background: #00BD1C; color: white; margin-top: 1px; font-size: 16px;') Mas vendedores
+        .col-md-2(align='center')
+          button.btn(type='button', style='background: white; margin-top: -2px;')
+            img(src='img/compartir.png', type='button')
+        .col-md-5(align='right')
+          label.btn.btn-sm.btn-primary.pseudo-button(for='cb', type='buttom', role='button', href='#', style='width: 200px; background: #E8860D; color: white; margin-top: 5px; font-size: 16px; text-align: center') Ver comentarios
+          input#cb.state-css-popup(type='checkbox')
+          .css-popup(tabindex='-1')
+            label.css-popup__close(for='cb', role='button')
+            .css-popup__inner.css-popup__layer
+              // Ventana Emergente
+              .css-popup__layout
+                // Cabecera de la Ventana Modal
+                .css-popup__header
+                  img.css-popup__img(src='img/img-usuario.png', alt='Title popup')
+                  h3.title.title_large.css-popup__title
+                    span.css-popup__layer.css-popup__label #{dl.nombre}
+                // Bloque de contenido de la Ventana
+                .css-popup__content(style='background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;')
+                  // Contenedor Principal  Comentarios
+                  .comments-container.css-popup__paragraph.css-popup__layer(style='margin-top: -10px;')
+                    h6 Comentarios
+                    ul#comments-list.comments-list
+                      each coment in coments
+                        li
+                          .comment-main-level
+                            
+                            // Avatar
+                            .comment-avatar(style='border-radius: 50px; border: 1px solid #FFFF; margin-top: -15px;')
+
+                              if (Usuario.img)
+                                img(src='iusuarios/#{Usuario.img}')
+                              else
+                                img(src='img/img-usuario.png')
+                            
+                            // Contenedor del Comentario
+                            .comment-box
+                              .comment-head
+                                h8.comment-name #{coment.nombre_usuario}
+                                span #{coment.fecha}
+                                i.fa.fa-heart
+                              .comment-content
+                                | #{coment.mensaje}
+
+
+                  //Ventana Modal para comentario
+
+                  if(Usuario.logeado)
+                    form.css-popup__paragraph.css-popup__layer(method='post', action="/producto" )
+                      .row(align='center')
+                        .col-md-offset-1.col-md-1
+                          ul#comments-list.comments-list
+                            .comment-main-level
+                              .comment-avatar(style='border-radius: 50px; border: 1px solid #FFFF; margin-top: -35px;')
+                                if (Usuario.img)
+                                  img(src='iusuarios/#{Usuario.img}')
+                                else
+                                  img(src='img/img-usuario.png')
+                                
+                                input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                                input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+                                input(name='NU' value='#{Usuario.nombre}' style='text-overflow: none; display: none')
+                                input(name='idl' value='#{dl.id}' style='text-overflow: none; display: none')
+
+                        .col-md-8(style='margin-left: 20px;', align='center')
+                          textarea#correo.form-control(name='texto' style='text-align: center;' placeholder='Ej. este local presta un buen servicio')
+                        .col-md-1
+                          button.Btn-user(type='submit',  name='cmt' value='true'  style='margin-top: 5px; width: 120px; height: 65px; margin-left: -5px;')
+                            i.fa.fa-paper-plane-o(aria-hidden="true" style='font-size: 30px;')
+                  else
+                    .row(align='center')
+                      span(style='text-align: left; font-size: 16px; margin-top: 5px;') Debes estar logeado para poder comentar
+
+                       
+
+    // Columna derecha
+    .col-md-5(align='right')
+      .separador-top-sm
+      label.btn.btn-sm.btn-primary.pseudo-button(for='b', type='buttom', role='button', href='#', style='width: 200px; background: #2B6F7C; color: white; margin-top: 5px; font-size: 16px; text-align: center') Calificar Local 
+      input#b.state-css-popup(type='checkbox')
+      .css-popup(tabindex='-1')
+        label.css-popup__close(for='b', role='button')
+        .css-popup__inner.css-popup__layer
+          // Ventana Emergente
+          .css-popup__layout
+            // Cabecera de la Ventana Modal
+            .css-popup__header
+              img.css-popup__img(src='http://stas-melnikov.ru/cliparts/tablet4_1200x470.jpg', alt='Title popup')
+              h3.title.title_large.css-popup__title
+                span.css-popup__layer.css-popup__label #{dl.nombre}
+            // Bloque de contenido de la Ventana
+            .css-popup__content(style='background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;', align='center')
+              div.css-popup__paragraph.css-popup__layer
+                div.css-popup__paragraph.css-popup__layer.row
+                    .container.inline-block(align='center' style='width: auto; ')
+                      .row(style='font-size: 80px;')
+                        div.star-rating
+                          form(action='/producto' method='post')
+                            
+                            input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                            input(name='estrellas', value='1' style='text-overflow: none; display: none')
+                            input#radio1(name='idl' value='#{dl.id}' style='text-overflow: none; display: none;')
+                            input#radio1(name='cmt' value='false' style='text-overflow: none; display: none;')
+                            input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+                            
+                            buttonp(type='submit') &#9733
+
+                          form(action='/producto' method='post')
+                            
+                            input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                            input(name='estrellas', value='2' style='text-overflow: none; display: none')
+                            input#radio1(name='idl' value='#{dl.id}' style='text-overflow: none; display: none;')
+                            input#radio1(name='cmt' value='false' style='text-overflow: none; display: none;')
+                            input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+                            
+                            buttonp(type='submit') &#9733
+
+                          form(action='/producto' method='post')
+                            
+                              input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                              input(name='estrellas', value='3' style='text-overflow: none; display: none')
+                              input#radio1(name='idl' value='#{dl.id}' style='text-overflow: none; display: none;')
+                              input#radio1(name='cmt' value='false' style='text-overflow: none; display: none;')
+                              input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+
+                            buttonp(type='submit') &#9733
+
+                          form(action='/producto' method='post')
+                            
+                              input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                              input(name='estrellas', value='4' style='text-overflow: none; display: none')
+                              input#radio1(name='idl' value='#{dl.id}' style='text-overflow: none; display: none;')
+                              input#radio1(name='cmt' value='false' style='text-overflow: none; display: none;')
+                              input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+
+                            buttonp(type='submit') &#9733
+                          
+                          form(action='/producto' method='post')
+                            
+                            input(name='idU' value='#{Usuario.id}' style='text-overflow: none; display: none')
+                            input(name='estrellas', value='5' style='text-overflow: none; display: none')
+                            input#radio1(name='idl' value='#{dl.id}' style='text-overflow: none; display: none;')
+                            input#radio1(name='cmt' value='false' style='text-overflow: none; display: none;')
+                            input(name='pid' value='#{dp.id}' style='text-overflow: none; display: none')
+
+                            buttonp(type='submit') &#9733
+
+                    //
+                      script(text/javascript).
+                        $('.col-md-1').hover(function(){
+                        $('#radio').hover;
+                                     })
+                        if($('.F1').clicked){
+                          $('.F1').hover(function(){
+                        $('.bbttnn').addClass('animacionVer');
+                                     })
+                        }
+                        $('.boton-flotante').mouseleave(function(){
+                          $('.bbttnn').removeClass('animacionVer');
+                        })
+
+
+      .separador-top-sm
+      div(style='width: auto; margin-top: 5px; height: 190px; border: solid 1px #A6A6A6; align-content: center; text-align: center;' align='right') Mapa de google
+          img.img-responsive(src='img/mapa.png' style='margin-left: 50px;')
+
+
+      .separador-top-sm
+      p(align='left', style='margin-top: 5px; font-size: 18px; text-align: right;') Información del producto:
+      div(style='margin-top: 5px; width: auto; height: 120px; /*border: solid 1px #CACACA;*/')
+        p  
+        span.form-control #{dl.informacionContacto.direccion.pais}, #{dl.informacionContacto.direccion.estado}, #{dl.informacionContacto.direccion.municipio}, #{dl.informacionContacto.direccion.calle}
+        .separador-top-sm
+        span.form-control #{dl.informacionContacto.numero}
+        .separador-top-sm
+        span.form-control #{dl.correo}
+  // Lista de derechos de autor
+  .row
+    .separador-top-sm
+    div(style='background: #08292F; color: white; text-align: center; margin-top: 20px;')
+      span Todos los derechos reservados

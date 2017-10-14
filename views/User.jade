@@ -1,0 +1,82 @@
+extends encabezado.jade
+block contenido
+  
+      // Identificador
+      .row(style='height: 30px; background: #1C5674; color: white;')
+        p(align='center', style='margin-top: 1px; font-size: 18px;') Perfil de Usuario
+
+
+      // Formularios
+
+      form(action='/cuenta' method='post' autocomplete='on', enctype='multipart/form-data')
+        .row
+          input(name='action' value='editar' style='text-overflow: none; display: none')
+          input(name='cuenta' value='usuario' style='text-overflow: none; display: none')
+          .col-md-1  
+          .col-md-5
+            .separador-top-sm
+            span.sub(align='left') Datos Personales:
+            .separador-top-sm
+            .row
+              .col-lg-10
+                span.input-lg.form-control(type='text', placeholder='') #{datos.nombre}
+            .separador-top-sm
+            .row
+              .col-lg-10
+                span.input-lg.form-control(type='text', placeholder='') #{datos.apellido}
+            .separador-top-sm
+            .row
+              .col-lg-10
+                  span.input-lg.form-control(type='text', placeholder='') #{datos.correo}
+            .separador-top-sm
+            span.sub(align='left') Datos de la Cuenta:
+            .separador-top-sm
+            .row
+              .col-lg-10
+                span.input-lg.form-control(type='text', placeholder='') #{datos.nombreUsuario}
+            .separador-top-sm
+            .row
+              .col-lg-10
+                input.input-lg.form-control(type='text',name='contrasena' placeholder='#{datos.contrasena}') 
+            .separador-top-sm
+          
+          .col-md-5
+            .separador-top-sm
+            .col-md-8
+              span.sub(style='text-align: right') Foto de perfil
+              .separador-top-sm
+            .col-md-4(align='center')
+              p
+
+                button.fa.fa-save(type='submite' style='font-size: 30px; background: white; color: #00BA14;}' align='right')
+            .separador-top-sm
+          
+
+            .row(align='center')
+              .col-md-1
+              
+              .col-md-12
+
+                .col-md-20.well(align='center', style='background: white; height: 390px; margin-top: 18px;')
+                  .separador-top-sm
+                  
+                  if(datos.img)
+                        img.img-responsive(src='iusuarios/#{datos.img}', style='width: auto; height: 280px;')
+                      else
+                        img.img-responsive(src='img/tienda-icono.png', style='width: auto; height: 280px;')
+                  .separador-top-sm  
+               
+                
+                //Boton Subir imagen  y Guardar Cambios
+                .row(align='center')
+                  .col-md-10
+                    input.btn-md#Imagen_Subir(type='file', style="width: auto;", name='img')
+                  .separador-top-sm
+      
+      .separador-top-sm(style='margin-bottom: -80px')
+      
+
+      // Lista de derechos de autor
+      .row(align='center')
+        div(style='background: #08292F; color: white; text-align: center; ')
+          span Todos los derechos reservados

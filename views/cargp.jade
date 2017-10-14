@@ -1,0 +1,70 @@
+extends encabezado.jade
+block contenido
+
+      // Identificador
+      .row(style='height: 30px; background: #20516D; color: white;')
+        p(align='center', style='margin-top: 1px; font-size: 18px;') Publicar Productos
+      
+      // Columnas
+      .separador-m
+      form.row(action='/cargp', method='post', autocomplete='on', enctype='multipart/form-data')
+        // separador
+        .col-md-1  
+        // Columna Izquierda
+        .col-md-5
+          // Titulo del la columna
+          .row(align='left' style='margin-top: 30px;')
+            span.sub(align='left' ) Datos del producto:
+          .separador-top-sm
+          // Elementos del la columna
+          .row(align='right')
+            .col-lg-10
+              input#nombre.input-lg.form-control(type='text', name="nombre", placeholder='Nombre del producto')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              input.input-lg.form-control(type='text', name="empresa", placeholder='Empresa')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              input.input-lg.form-control(type='text', name="descrip", placeholder='Breve descripción del producto')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              .input-group
+                input.form-control(type='text', name="tprod", placeholder='Tipo de productos')
+                span.input-group-addon \/
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              .input-group
+                input.form-control(type='text', name="precio", placeholder='Precio')
+                span.input-group-addon \/
+        // Columna Derecha
+        .col-md-6
+          // Titulo del la columna
+          .row(style='margin-top: 30px;')
+            .col-md-6
+              span.sub(style='text-align: right; align-content: center') Imagen del producto:
+          .separador-top-sm
+          .row
+            .col-lg-10
+              .col-lg-20.img-container(align='center')
+                img.img-container-s.img-responsive(src='img/img.png' style='width: 240px; height: 240px;')
+   
+          .row(align='center' style='margin-top: 30px;')
+            .col-md-9
+              input.btn.btn-inverse(type='file', name='imag_producto', placeholder='Cargar imagen')
+            .separador-top
+            // Boton de registrar
+            .col-md-6
+              button.btn.btn-primary(type='submite' style='background: #14AD46; position: absolute;')
+                | Publicar Producto
+      .separador-top-sm
+      // Lista de derechos de autor
+      .row(align='center')
+        .col-md-1
+        .col-md-10(style='background: #08292F; color: white; text-align: center; margin-left: 10px;')
+          span Todos los derechos reservados
+        .col-md-1
+ 

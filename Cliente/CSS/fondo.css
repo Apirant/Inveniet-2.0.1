@@ -1,0 +1,8 @@
+background-size: cover;
+
+body {
+   background-image: src('./img/1.jpg') center center no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+}

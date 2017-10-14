@@ -1,0 +1,206 @@
+doctype html
+html
+  head
+    title Registrar Usuario
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='CSS/contenedores.css')
+    link(rel='stylesheet', href='CSS/slider.css')
+    link(rel='stylesheet', href='CSS/Navegacion.css')
+    link(rel='stylesheet', href='CSS/social.css')
+    link(rel='stylesheet', href='CSS/Formas.css')
+    link(rel='stylesheet', href='CSS/Formulario.css')
+    link(rel='stylesheet', href='CSS/VentanaModal.css')
+    // Cargo VueJS
+    link(rel='stylesheet', type='text/css', href='vue.min.js')
+    script(src='https://unpkg.com/vue')
+    // Boostrap
+    link(href='CSS/boostrap/bootstrap.css', rel='stylesheet')
+    // Flat-UI
+    link(rel='stylesheet', href='CSS/Flat-UI/dist/css/flat-ui.min.css')
+  body
+    .container(style='background: white;')
+      // Barra de navegación
+      nav.row(align='left', style='background: white; border: solid 1px #E9E9E9;')
+        // Logo
+        .col-md-1(style='margin-left: -20px;')  
+        .col-md-1(align='center')
+          img.img-responsive(src='img/logo.png', style='width: 40px; height: 60px;')
+        .col-md-1(align='center', style='text-align: right; ')
+          h5(style='text-align: center;') Inveniet
+        .col-md-1
+        // Barra de Búsqueda
+        .col-lg-5
+          p   
+          .input-group.input-group-sm.input-group-rounded(style='border-radius: 10px;')
+            input#barra1.form-control(type='text', style='text-align: center', placeholder='Ej. nombre del producto')
+            span.input-group-btn
+              a.btn(type='submit', href='BuscarProductos.html')
+                span.fui-search
+        // Botones de Logeo
+        .col-lg-3(align='center')
+          p  
+          // Aplicación de ingreso de sesión
+          #Ingresar.col-lg-5
+            a#show-modal1.Btn-p(@click='showModal1 = true', type='button', style='margin-right: 20px;') Ingresar
+            ingresar(v-if='showModal1', @close='showModal1 = false')
+              h5(slot='header')
+                .col-md-3(align='right')
+                  img.img-responsive(src='img/logo.png', style='width: 20px; height: 30px;')
+                .col-md-8(align='left')
+                  h5(style='color: black;') Inveniet
+          // Aplicación de selección de cuenta
+          #Registrar.col-lg-5
+            a#show-modal.Btn-p(@click='showModal = true', type='button', style='margin-right: 20px;') Registrarse
+            modal(v-if='showModal', @close='showModal = false')
+              h5(slot='header')
+                .col-md-3(align='right')
+                  img.img-responsive(src='img/logo.png', style='width: 20px; height: 30px;')
+                .col-md-8(align='left')
+                  h5(style='color: black;') Inveniet
+        p   
+      // Identificador
+      .row(style='height: 30px; background: #01474F; color: white;')
+        p(align='center', style='margin-top: 1px; font-size: 18px;') Registrar Usuario
+      // Formularios
+      form.row(action='/Cliente', method='post', autocomplete='on')
+        .col-md-1  
+        .col-md-5
+          .separador-top-sm
+          span.sub(align='left') Datos Personales:
+          .separador-top-sm
+          .row
+            .col-lg-10
+              input#nombre.input-lg.form-control(type='text', placeholder='Nombre')
+          .separador-top-sm
+          .row(align='center')
+            .col-lg-10
+              input#apellido.input-lg.form-control(type='text', placeholder='Apellido')
+          .separador-top-sm
+          .row
+            .col-lg-10
+              .input-group
+                input#correo.form-control(type='text', placeholder='Email')
+                span.input-group-addon @gmail.com
+          .separador-top-sm
+          span.sub(align='left') Datos de la Cuenta:
+          .separador-top-sm
+          .row
+            .col-lg-10
+              input#nombreUsuario.input-lg.form-control(type='text', placeholder='Nombre de Usuario')
+          .separador-top-sm
+          .row
+            .col-lg-10
+              input#contrasena.input-lg.form-control(type='password', placeholder='Contraseña')
+          .separador-top-sm
+        .col-md-5
+          .separador-top-sm
+          span.sub(style='text-align: right') Verificación de seguridad:
+          .separador-top-sm
+          .row(align='center')
+            .col-md-1  
+            .col-lg-10
+              .col-lg-20.codigoQR(align='center', style='height: 400px;')
+                | recaptcha
+              .separador-top-sm
+              // Boton de registrar
+              .row(align='center')
+                button.btn.btn-hg.btn-primary.btn-R(href='RegSeleccionar.html', style='height: 40px; width: 380px; background: #09B62D; color: white; font-size: 16px; margin-top: 5px;')
+                  | Registrar
+      .separador-top-sm(style='margin-bottom: -80px')
+      // Lista de derechos de autor
+      .row(align='center')
+        div(style='background: #08292F; color: white; text-align: center; ')
+          span Todos los derechos reservados
+  // Ventana Ingresar
+  // Ventana Modal (ingresar) codigo fuente
+  script#Ingresar-Ventana(type='text/x-template').
+    <transition name="modal">
+    <div class="modal-mask">
+    <div class="modal-wrapper">
+    <div class="modal-container">
+    <div class="modal-header">
+    <slot name="header">
+    Inveniet
+    </slot>
+    </div>
+    <div class="modal-body">
+    <slot name="body">
+    <input type="text" placeholder="Correo electrónico" class="input-lg form-control" style="margin-bottom: 15px;" />
+    <input type="password" placeholder="Contraseña" class="input-lg form-control" />
+    </slot>
+    </div>
+    <div class="modal-footer">
+    <slot name="footer">
+    <div class="row" align="center">
+    <div class="col-md-4" align="left">
+    <button class="Btn-p" @click="$emit('close')" href="principal.html">Salir</button>
+    </div>
+    <div class="col-md-8" align="right">
+    <a type="button" class="Btn-p" href="PaginaPrincipal.html">Iniciar Secsión</a>
+    </div>
+    </div>
+    </slot>
+    </div>
+    </div>
+    </div>
+    </div>
+    </transition>
+  // Aplicación con Vuejs para la ventana (ingresar)
+  script(type='text/javascript').
+    Vue.component('ingresar', {
+    template: '#Ingresar-Ventana'
+    })
+    new Vue({
+    el:'#Ingresar',
+    data: {
+    showModal1: false
+    }
+    })
+  // Ventana Registrar
+  // Ventana Modal (Registrar) codigo fuente
+  script#Registrar-Ventana(type='text/x-template').
+    <transition name="modal">
+    <div class="modal-mask">
+    <div class="modal-wrapper">
+    <div class="modal-container">
+    <div class="modal-header">
+    <slot name="header">
+    Inveniet
+    </slot>
+    </div>
+    <div class="modal-body">
+    <slot name="body">
+    <div class="row" id="tipo-cuenta">
+    <a href="RegistrarLocal.html" id="tienda" class="col-md-5 Btn-p2 " onclick="Tcuenta(tienda)" style="margin-right: 20px; margin-left: 10px; background: white; text-align: center;">
+    <img src="img/tienda-icono.png" class="img-responsive" alt="">
+    Tienda
+    </a>
+    <a href="RegistrarUsuario.html" id="usuario" class="col-md-5 Btn-p2 " style="background: white; text-align: center;">
+    <img src="img/user-icono.png" class="img-responsive" onmouseover="alert('entraste en el area del contenedor') alt="">
+    Usuario
+    </a>
+    </div>
+    </slot>
+    </div>
+    <div class="modal-footer">
+    <slot name="footer">
+    <div class="row" align="center">
+    <button class="Btn-p" @click="$emit('close')" href="principal.html">regresar</button>
+    </div>
+    </slot>
+    </div>
+    </div>
+    </div>
+    </div>
+    </transition>
+  // Aplicación con Vuejs para la ventana (ingresar)
+  script(type='text/javascript').
+    Vue.component('modal', {
+    template: '#Registrar-Ventana'
+    })
+    new Vue({
+    el:'#Registrar',
+    data: {
+    showModal: false
+    }
+    })

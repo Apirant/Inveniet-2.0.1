@@ -1,0 +1,220 @@
+doctype html
+html
+  head
+    title Publicar productos
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='CSS/contenedores.css')
+    link(rel='stylesheet', href='CSS/slider.css')
+    link(rel='stylesheet', href='CSS/Navegacion.css')
+    link(rel='stylesheet', href='CSS/social.css')
+    link(rel='stylesheet', href='CSS/Formas.css')
+    link(rel='stylesheet', href='CSS/Formulario.css')
+    link(rel='stylesheet', href='CSS/VentanaModal.css')
+    // Cargo VueJS
+    link(rel='stylesheet', type='text/css', href='vue.min.js')
+    script(src='https://unpkg.com/vue')
+    // Boostrap
+    link(href='CSS/boostrap/bootstrap.css', rel='stylesheet')
+    // Flat-UI
+    link(rel='stylesheet', href='CSS/Flat-UI/dist/css/flat-ui.min.css')
+  body
+    .container
+      .separador-sm
+      // Barra de navegación
+      nav.row(align='left', style='background: white; border: solid 1px #E9E9E9;')
+        // Logo
+        .col-md-1(style='margin-left: -20px;')  
+        .col-md-1(align='center')
+          img.img-responsive(src='img/logo.png', style='width: 40px; height: 60px;')
+        .col-md-1(align='center', style='text-align: right; ')
+          h5(style='text-align: center;') Inveniet
+        .col-md-1
+        // Barra de Búsqueda
+        .col-lg-5
+          p   
+          .input-group.input-group-sm.input-group-rounded(style='border-radius: 10px;')
+            input#barra1.form-control(type='text', style='text-align: center', placeholder='Ej. nombre del producto')
+            span.input-group-btn
+              a.btn(type='submit', href='BuscarProductos.html')
+                span.fui-search
+        // Botones de Logeo
+        .col-lg-3(align='center')
+          p  
+          // Aplicación de ingreso de sesión
+          #Ingresar.col-lg-5
+            a#show-modal1.Btn-p(@click='showModal1 = true', type='button', style='margin-right: 20px;') Ingresar
+            ingresar(v-if='showModal1', @close='showModal1 = false')
+              h5(slot='header')
+                .col-md-3(align='right')
+                  img.img-responsive(src='img/logo.png', style='width: 20px; height: 30px;')
+                .col-md-8(align='left')
+                  h5(style='color: black;') Inveniet
+          // Aplicación de selección de cuenta
+          #Registrar.col-lg-5
+            a#show-modal.Btn-p(@click='showModal = true', type='button', style='margin-right: 20px;') Registrarse
+            modal(v-if='showModal', @close='showModal = false')
+              h5(slot='header')
+                .col-md-3(align='right')
+                  img.img-responsive(src='img/logo.png', style='width: 20px; height: 30px;')
+                .col-md-8(align='left')
+                  h5(style='color: black;') Inveniet
+        p   
+      // Identificador
+      .row(style='height: 30px; background: #20516D; color: white;')
+        p(align='center', style='margin-top: 1px; font-size: 18px;') Publicar Productos
+      // Columnas
+      .separador-m
+      form.row(action='/cargp', enctype='multipart/form-data')
+        // separador
+        .col-md-1  
+        // Columna Izquierda
+        .col-md-5
+          // Titulo del la columna
+          .row(align='left')
+            span.sub(align='left') Datos del producto:
+          .separador-top-sm
+          // Elementos del la columna
+          .row(align='right')
+            .col-lg-10
+              input.input-lg.form-control(type='text', placeholder='Nombre del producto')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              input.input-lg.form-control(type='text', placeholder='Empresa')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              input.input-lg.form-control(type='text', placeholder='Breve descripción del producto')
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              .input-group
+                input.form-control(type='text', placeholder='Tipo de productos')
+                span.input-group-addon \/
+          .separador-top-sm
+          .row(align='right')
+            .col-lg-10
+              .input-group
+                input.form-control(type='text', placeholder='Precio')
+                span.input-group-addon \/
+        // Columna Derecha
+        .col-md-6
+          // Titulo del la columna
+          .row
+            .col-md-6
+              span.sub(style='text-align: right; align-content: center') Imagen del producto:
+          .separador-top-sm
+          .row
+            .col-lg-10
+              .col-lg-20.img-container(align='center')
+                img.img-container-s(src='img/img.png')
+                p Imagen del producto
+          p   
+          .row(align='center')
+            .col-md-9
+              input.btn.btn-inverse(type='file', name='imag_producto', placeholder='Cargar imagen')
+            .separador-top
+            // Boton de registrar
+            .col-md-6
+              button.btn.btn-primary(style='background: #14AD46; position: absolute;')
+                | Publicar Producto
+      .separador-top-sm
+      // Lista de derechos de autor
+      .row(align='center')
+        .col-md-1
+        .col-md-10(style='background: #08292F; color: white; text-align: center; margin-left: 10px;')
+          span Todos los derechos reservados
+        .col-md-1
+  // Ventana Ingresar
+  // Ventana Modal (ingresar) codigo fuente
+  script#Ingresar-Ventana(type='text/x-template').
+    <transition name="modal">
+    <div class="modal-mask">
+    <div class="modal-wrapper">
+    <div class="modal-container">
+    <div class="modal-header">
+    <slot name="header">
+    Inveniet
+    </slot>
+    </div>
+    <div class="modal-body">
+    <slot name="body">
+    <input type="text" placeholder="Correo electrónico" class="input-lg form-control" style="margin-bottom: 15px;" />
+    <input type="password" placeholder="Contraseña" class="input-lg form-control" />
+    </slot>
+    </div>
+    <div class="modal-footer">
+    <slot name="footer">
+    <div class="row" align="center">
+    <div class="col-md-4" align="left">
+    <button class="Btn-p" @click="$emit('close')" href="principal.html">Salir</button>
+    </div>
+    <div class="col-md-8" align="right">
+    <a type="button" class="Btn-p" href="PaginaPrincipal.html">Iniciar Secsión</a>
+    </div>
+    </div>
+    </slot>
+    </div>
+    </div>
+    </div>
+    </div>
+    </transition>
+  // Aplicación con Vuejs para la ventana (ingresar)
+  script(type='text/javascript').
+    Vue.component('ingresar', {
+    template: '#Ingresar-Ventana'
+    })
+    new Vue({
+    el:'#Ingresar',
+    data: {
+    showModal1: false
+    }
+    })
+  // Ventana Registrar
+  // Ventana Modal (Registrar) codigo fuente
+  script#Registrar-Ventana(type='text/x-template').
+    <transition name="modal">
+    <div class="modal-mask">
+    <div class="modal-wrapper">
+    <div class="modal-container">
+    <div class="modal-header">
+    <slot name="header">
+    Inveniet
+    </slot>
+    </div>
+    <div class="modal-body">
+    <slot name="body">
+    <div class="row" id="tipo-cuenta">
+    <a href="RegistrarLocal.html" id="tienda" class="col-md-5 Btn-p2 " onclick="Tcuenta(tienda)" style="margin-right: 20px; margin-left: 10px; background: white; text-align: center;">
+    <img src="img/tienda-icono.png" class="img-responsive" alt="">
+    Tienda
+    </a>
+    <a href="RegistrarUsuario.html" id="usuario" class="col-md-5 Btn-p2 " style="background: white; text-align: center;">
+    <img src="img/user-icono.png" class="img-responsive" onmouseover="alert('entraste en el area del contenedor') alt="">
+    Usuario
+    </a>
+    </div>
+    </slot>
+    </div>
+    <div class="modal-footer">
+    <slot name="footer">
+    <div class="row" align="center">
+    <button class="Btn-p" @click="$emit('close')" href="principal.html">regresar</button>
+    </div>
+    </slot>
+    </div>
+    </div>
+    </div>
+    </div>
+    </transition>
+  // Aplicación con Vuejs para la ventana (ingresar)
+  script(type='text/javascript').
+    Vue.component('modal', {
+    template: '#Registrar-Ventana'
+    })
+    new Vue({
+    el:'#Registrar',
+    data: {
+    showModal: false
+    }
+    })

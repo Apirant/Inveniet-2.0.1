@@ -1,0 +1,203 @@
+doctype html
+html
+  head
+    title Inveniet v2.0
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    script(src='Animaciones/slider.js')
+    link(rel='stylesheet', href='CSS/contenedores.css')
+    link(rel='stylesheet', href='CSS/slider.css')
+    link(rel='stylesheet', href='CSS/Navegacion.css')
+    link(rel='stylesheet', href='CSS/social.css')
+    link(rel='stylesheet', href='CSS/Formas.css')
+    link(rel='stylesheet', href='CSS/Productos.css')
+    link(rel='stylesheet', href='CSS/botonesociales.css')
+    link(rel='stylesheet', href='CSS/Btnsociales.css')
+    link(rel='stylesheet', href='CSS/VentanaModal.css')
+    // Boostrap
+    // CSS
+    link(href='CSS/boostrap/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='CSS/boostrap/bootstrap.min.css', rel='stylesheet')
+    // Javascript
+    script(src='CSS/bootstrap4.0/js/bootstrap.min.js')
+    script(src='Animaciones/slider.js')
+    script(src='Animaciones/animacion.js')
+    script(src='Animaciones/vue.min.js')
+    // Flat-UI
+    link(rel='stylesheet', href='CSS/Flat-UI/dist/css/flat-ui.min.css')
+    // hover para las Imagenes
+    link(rel='stylesheet', href='CSS/imagenHover/imagehover.css')
+    // Owl-carrucel
+    link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.carousel.css')
+    link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.theme.default.min.css')
+    script(src='jquery-3.2.0.min.js')
+    script(src='CSS/OwlCarousel/dist/owl.carousel.min.js')
+    // Font Awesome
+    link(rel='stylesheet', href='CSS/font-awesome/css/font-awesome.min.css')
+  body
+    .container(style='background: white; border: solid 1px #E9E9E9;')
+      form(action='/fstec', method='post', autocomplete='on')
+        // Barra de navegación
+        nav.row(align='left', style='background: white; ')
+          // Logo
+          .col-md-1(style='margin-left: -20px;')  
+          .col-md-3(align='center')
+            img.img-responsive(src='img/unefa.jpg', style='width: 50px; height: 70px;')
+          .col-md-5(align='center', style='text-align: right; ')
+            h5(style='text-align: center;') Ficha de Soporte tecnico
+          // Botones de Logeo
+          .col-lg-3(align='center')
+            p  
+            img.img-responsive(src='img/canaima.png', style='width: 150px; height: 60px;')
+          p   
+        // Datos del aula
+        .row(align='center')
+          .col-md-1
+          p  
+          span Datos del Aula
+          p  
+          .col-md-1
+          .col-md-5
+            .row
+              input.input-lg.form-control(type='text', name="ND", placeholder='Nombre del Docente')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="NA", placeholder='Nombre del Alumno')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="INS", placeholder='Institucion de procedencia')
+          .col-md-1
+          .col-md-4
+            .row
+              input.input-lg.form-control(type='text', name="G",placeholder='Grado')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="SEC", placeholder='Seccion')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="TIN", placeholder='Tipo de institucion')
+          .col-md-1
+        p  
+        // Datos del computador
+        .row(align='center')
+          .col-md-1
+          p  
+          span Datos del Computador
+          p  
+          .col-md-1
+          .col-md-5
+            .row
+              input.input-lg.form-control(type='text', name="PC", placeholder='Posee Canaima (SI / NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="MOD", placeholder='Modelo del Computador')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="SER", placeholder='Serial del computador')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="SO", placeholder='Sistema Operativo')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="VSO", placeholder='Version del S.O.')
+          .col-md-1
+          .col-md-4
+            .row
+              input.input-lg.form-control(type='text', name="NUSB", placeholder='Numero de puertos USB')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="NR", placeholder='Numero de puertos de Red')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="NAUD", placeholder='Numero de puertos de audios')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="TPV", placeholder='Tipo de puerto de video (VGA/HDMI)')
+          .col-md-1
+        p  
+        // Condicion general del equipo
+        .row(align='center')
+          .col-md-1
+          p  
+          span Condiciones del equipo
+          p  
+          .col-md-1
+          .col-md-5
+            .row
+              input.input-lg.form-control(type='text', name="CG", placeholder='Condicion general (Excelente, Buena, Regular, Mala y Otros)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="NAS", placeholder='Nivel de aseo (Excelente, Bueno, Regular, Malo)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="TECL", placeholder='El computador posee Todas las teclas (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="M", placeholder='El trackpack integrado funciona (SI/NO/PARCIALMENTE)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="PANT", placeholder='Estado de la pantalla (Bueno, Malo, con fallas)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="BATT", placeholder='Estado de la bateria (Bueno, Malo, con fallas)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="CAM", placeholder='Estado de la camara (Bueno, Malo, con fallas)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="COR", placeholder='Estado de las cornetas (Bueno, Malo, con fallas)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="EUSB", placeholder='Estado de los puertos USB (Bueno, Malo, Sucio)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="USBO", placeholder='Cantidad de puerto USB operativos')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="EPV", placeholder='Estado del puerto VGA/HDMI (Bueno, Malo, Sucio)')
+          .col-md-1
+          .col-md-4
+            .row
+              input.input-lg.form-control(type='text', name="ER", placeholder='Estado del puerto de red (Bueno, Malo, Sucio)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="EWF", placeholder='El WIFI esta operativo (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="PCR", placeholder='El Computador realiza un ruido al encender (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="HOT", placeholder='Al tocar el respirador sientes que exhala aire caliente (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="CULER", placeholder='El Culer logra escucharse o emite ruido (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="DISR", placeholder='Al copiar archivos el disco hace ruidos (SI/NO)')
+            p  
+            .row
+              .col-md-9
+                input.input-lg.form-control(type='text', name="NMD", placeholder='Memoria disponible (Numero)')
+              .col-md-3
+                input.input-lg.form-control(type='text', name="UMD", placeholder='Unid')
+            p  
+            .row
+              .col-md-9
+                input.input-lg.form-control(type='text', name="TD", placeholder='Tamano del Disco (Numero)')
+              .col-md-3
+                input.input-lg.form-control(type='text', name="UTD", placeholder='Unid')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="CC", placeholder='Posee los contenidos Canaima (SI/NO/Algunos)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="OFF", placeholder='Posee la suite libre office (SI/NO)')
+            p  
+            .row
+              input.input-lg.form-control(type='text', name="GAME", placeholder='Posee juegos o Soft. de terceros (SI/NO)')
+          .col-md-1
+        p  
+        .row(align='center')
+          p
+          button.btn.btn-primary(type='submite', style='width: 30%;')  Guardar 
+          .separador-top-sm

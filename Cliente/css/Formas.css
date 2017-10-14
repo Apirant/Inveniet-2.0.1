@@ -1,0 +1,220 @@
+/* CSS para las columnas plegables */
+
+
+.custon{ 
+    position: relative ; 
+
+    height: 200px; 
+    width: 150px; 
+
+
+    background-color: #FBFFFF; 
+    
+
+	text-align: center;
+	float: left;
+
+
+    transform: skew(153deg); 
+    -webkit-transform: skew(153deg); 
+    border-top: 0px solid transparent; 
+    border-bottom: 0px solid transparent; 
+    
+}
+
+
+
+.animacion-left
+{
+	transition: margin-left 1s, width 1s,color 1s; 
+}
+
+.animacion-right
+{
+	transition: width 1s,color 1s; 
+}
+
+.cust-right:hover,
+.cust-right:focus,
+.cust-right:active,
+.cust-right.active
+{
+    width:40%;
+    color: black;
+
+    background: white;
+    border: 5px solid #BEBCBC;
+    border-right: 10px solid #D143CC;
+
+    position:  relative;
+
+            }
+
+.cust-left:hover,
+.cust-left:focus,
+.cust-left:active,
+.cust-left.active
+{
+    width: 40%;
+    margin-left: 10%;
+
+    background: white;
+    border:  5px solid #BEBCBC;
+    border-left: 10px solid #14EC14;
+    
+
+    color: black;
+    text-align: center;
+    position:  relative;
+
+            }
+
+
+.img
+{
+	margin-top: 0%;
+}
+
+.cust-left
+{
+	margin-left: 35%;
+	text-align: center;
+	justify-content: center;
+	outline: none;
+	border-left: 13px solid #14EC14;
+	border-right: 1px solid #BEBCBC;
+	border-top: 1px solid #BEBCBC;
+	border-bottom: 1px solid #BEBCBC;
+
+	color: #FBFFFF; 
+
+}
+
+.cust-right
+{
+	outline: none;
+	margin-top: 8%;
+	text-align: center;
+	justify-content: center;
+	border-right: 13px solid #D143CC; 
+	border-left: 1px solid #BEBCBC;
+	border-top: 1px solid #BEBCBC;
+	border-bottom: 1px solid #BEBCBC;
+
+	 
+}
+
+.separador
+{
+	width: 2px;
+	height: 100%;
+	float: left;
+	background: #667D83;
+
+}
+
+.separador-top
+{
+	margin-top: 15%;
+}
+
+.separador-top-sm
+{
+	margin-top: 10%;
+}
+
+.copyR
+{
+	margin-top: 19.5%;
+	margin-left: 1px;
+}
+
+.copy-rigth
+{
+	width: 100%;
+	height: 80px;
+	font-size: 14pt;
+	text-align: center;
+	background: #4AC0C1;
+	color: white;
+}
+
+.copy-container
+{
+margin-top: 2%;
+}
+
+
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to:hover /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+.circulo {
+	margin-top: 12px;
+     width: 180px;
+     height: 180px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background: #5cb85c;
+}
+
+.circulo-img {
+	margin-top: 12px;
+     width: 120px;
+     height: 115px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     border: solid 1px #30E5E3;
+     background: white;
+} 
+
+.Vinculo
+{
+	margin-top: 12px;
+     width: auto;
+     height: 3px;
+     border: solid 1px #16CDA8;
+     background:  #16CDA8;
+}
+
+
+
+.Btn-T {
+  
+  color: #08292F;
+  background: transparent;
+
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: color 0.20s linear;
+          transition: color 0.20s linear;
+
+}
+
+/* Ilumina el boton */
+.Btn-T:hover,
+.Btn-T.hover,
+.Btn-T:focus,
+.Btn-T:active,
+.Btn-T.active,
+.open > .dropdown-toggle.btn-primary {
+
+  color:  #20D2CA;
+
+}

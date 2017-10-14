@@ -1,0 +1,317 @@
+
+.nav-container>.Membrete
+{
+	width: 30%;
+	height: 30%;
+	float: left;
+	  display: inline-block;
+}
+
+.nav-container>.Search
+{
+	width: 40%;
+	height: 10%;
+	float: left;
+  margin-top: 10px;
+	position: center;
+	align-content: center;
+	  display: inline-block;
+}
+
+.nav-container>.Cuenta
+{
+	width: 30%;
+	height: 30%; 
+  margin-top: 10px;
+	float: left;
+	  display: inline-block;
+}
+
+
+.Logo
+{
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	  display: inline-block;
+	float: left;
+ }
+
+.titulo{
+  font-size: 24px;
+  line-height: 1.042;
+  height: 53px;
+  font-weight: 700;
+  padding: 14px 21px;
+  color: #12BCB4;
+
+}
+
+ .container-nav-right
+ {
+ 	left: auto;
+    right: 0;
+ }
+
+.nav-btn
+{
+	color: white;
+	background-color: #3BC1C3;
+  border-color:  #3BC1C3;
+	margin-right: 5px; 
+  border: solid 1px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 20px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+          transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+
+}
+
+.b-primary {
+	
+  border: solid 1px #951EB7;
+  color: #ffffff;
+  background-color: #951EB7;
+
+}
+
+/* Cambia de color las letras */
+.nav-btn:hover,
+.nav-btn:focus {
+  color: #8F9D9B;
+  background-color: white;
+  border: solid 1px;
+  border-color: #B1B8B8;
+
+}
+
+/* fin del cambio de color */
+
+.nav-btn:active,
+.nav-btn.active {
+  outline: none;
+  box-shadow: none;
+}
+.nav-btn:focus:active {
+  outline: none;
+}
+
+/* Ilumina el boton */
+.b-primary:hover,
+.b-primary.hover,
+.b-primary:focus,
+.b-primary:active,
+.b-primary.active,
+.open > .dropdown-toggle.btn-primary {
+
+	color: #8F9D9B;
+	background-color: white;
+  border: solid 1px;
+  border-color: #B1B8B8;
+}
+
+.Btn-p {
+  
+  border: solid 1px #C7C7C7;
+  color: #C7C7C7;
+  background-color: white;
+
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+          transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+
+}
+
+/* Ilumina el boton */
+.Btn-p:hover,
+.Btn-p.hover,
+.Btn-p:focus,
+.Btn-p:active,
+.Btn-p.active,
+.open > .dropdown-toggle.btn-primary {
+
+  color:white;
+  background-color: #05B120;
+  border: solid 1px;
+  border-color:  #05B120;
+}
+
+
+.social-btn
+{
+    border: solid 1px black;
+    background-color: white;
+    width: 35px;
+    margin-right: 5px; 
+    border: solid 1px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 80px;
+    padding: 5px 5px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+            transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+}
+
+.social-btn:hover,
+.social-btn.hover,
+.social-btn:focus,
+.social-btn:active,
+.social-btn.active,
+.open > .dropdown-toggle.social-btn 
+{
+
+  background-color:  #174E59;
+  border: solid 1px black;
+  border-color:  #174E59;
+}
+
+
+
+.Btn-user {
+  
+  border: solid 1px #05B120;
+  color: white;
+  background-color: #05B120;
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.20s linear, color 0.20s linear, background-color 0.20s linear;
+          transition: border 0.20s linear, color 0.20s linear, background-color 0.20s linear;
+
+}
+
+/* Ilumina el boton */
+.Btn-user:hover,
+.Btn-user.hover,
+.Btn-user:focus,
+.Btn-user:active,
+.Btn-user.active,
+.open > .dropdown-toggle.btn-primary {
+
+  color: #05B120;
+  background-color: white;
+  border: solid 1px;
+  border-color:  #05B120;
+}
+
+
+
+.Btn-p2 {
+  
+  border: solid 1px #CBCBCB;
+  color: white;
+  background-color: white;
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+          transition: border 0.40s linear, color 0.40s linear, background-color 0.40s linear;
+
+}
+
+/* Ilumina el boton */
+.Btn-p2:hover,
+.Btn-p2.hover,
+.Btn-p2:focus,
+.Btn-p2:active,
+.Btn-p2.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #05B120;
+  background-color: white;
+  border: solid 1px;
+  border-color:  #05B120;
+}
+
+
+
+.Btn-g {
+  
+  border: solid 1px #3C0C93;
+  color: white;
+  background-color: #3C0C93;
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.20s linear, color 0.20s linear, background-color 0.20s linear;
+          transition: border 0.20s linear, color 0.20s linear, background-color 0.20s linear;
+
+}
+
+/* Ilumina el boton */
+.Btn-g:hover,
+.Btn-g.hover,
+.Btn-g:focus,
+.Btn-g:active,
+.Btn-g.active,
+.open > .dropdown-toggle.btn-primary {
+
+  color: #FFFFFF;
+  background-color: #F98100;
+  border: solid 1px;
+  border-color:  #F98100;
+}
+
+
+.Btn-gW {
+  
+  border: solid 1px #00A621;
+  color: white;
+  background-color: #00A621;
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+
+  }
+
+.Btn-gL {
+  
+  border: solid 1px #BF0000;
+  color: white;
+  background-color: #BF0000;
+outline: none;
+  margin-right: 5px; 
+
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 8px;
+  padding: 5px 15px;
+
+  }

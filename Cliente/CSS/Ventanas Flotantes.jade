@@ -1,0 +1,102 @@
+extends encabezado.jade
+block contenido
+//Ventana de Comentarios 
+
+label.btn.btn-sm.btn-primary.pseudo-button(for='cb', type='buttom', role='button', href='#', style='width: 200px; background: #E8860D; color: white; margin-top: 5px; font-size: 16px; text-align: center') Ver comentarios 
+input#cb.state-css-popup(type='checkbox')
+.css-popup(tabindex='-1')
+  label.css-popup__close(for='cb', role='button')
+  .css-popup__inner.css-popup__layer
+    // Ventana Emergente
+    .css-popup__layout
+      // Cabecera de la Ventana Modal
+      .css-popup__header
+        img.css-popup__img(src='http://stas-melnikov.ru/cliparts/tablet4_1200x470.jpg', alt='Title popup')
+        h3.title.title_large.css-popup__title
+          span.css-popup__layer.css-popup__label Nombre del Local
+      // Bloque de contenido de la Ventana
+      .css-popup__content(style='background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;')
+        // Contenedor Principal  Comentarios
+        .comments-container.css-popup__paragraph.css-popup__layer(style='margin-top: -10px;')
+          h6 Comentarios
+          ul#comments-list.comments-list
+            li
+              .comment-main-level
+                // Avatar
+                .comment-avatar(style='border-radius: 50px; border: 1px solid #FFFF; margin-top: -15px;')
+                  img(src='http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg', alt='')
+                // Contenedor del Comentario
+                .comment-box
+                  .comment-head
+                    h8.comment-name Agustin Ortiz
+                    span hace 20 minutos
+                    i.fa.fa-heart
+                  .comment-content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+            li
+              .comment-main-level
+                // Avatar
+                .comment-avatar(style='border-radius: 50px; border: 1px solid #FFFF; margin-top: -15px;')
+                  img(src='http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg', alt='')
+                // Contenedor del Comentario
+                .comment-box
+                  .comment-head
+                    h8.comment-name Lorena Rojero
+                    span hace 10 minutos
+                    i.fa.fa-heart
+                  .comment-content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+        form.css-popup__paragraph.css-popup__layer(method='post', action='')
+          .row(align='center')
+            .col-md-offset-1.col-md-1
+              ul#comments-list.comments-list
+                .comment-main-level
+                  .comment-avatar(style='border-radius: 50px; border: 1px solid #FFFF; margin-top: -35px;')
+                    img(src='img/img-usuario.png', alt='')
+            .col-md-8(style='margin-left: 20px;', align='center')
+              textarea#correo.form-control(name='correo', placeholder='')  Escribe tu comentario
+            .col-md-1
+              input.Btn-user(type='submit', style='margin-top: 5px; width: auto; height: 58px; margin-left: -1px; ', value='publicar', placeholder='enviar')
+
+
+
+
+
+
+ //Ventana Calificar 
+ label.btn.btn-sm.btn-primary.pseudo-button(for='b', type='buttom', role='button', href='#', style='width: 200px; background: #2B6F7C; color: white; margin-top: 5px; font-size: 16px; text-align: center') Calificar Local 
+input#b.state-css-popup(type='checkbox')
+.css-popup(tabindex='-1')
+  label.css-popup__close(for='b', role='button')
+  .css-popup__inner.css-popup__layer
+    // Ventana Emergente
+    .css-popup__layout
+      // Cabecera de la Ventana Modal
+      .css-popup__header
+        img.css-popup__img(src='http://stas-melnikov.ru/cliparts/tablet4_1200x470.jpg', alt='Title popup')
+        h3.title.title_large.css-popup__title
+          span.css-popup__layer.css-popup__label Nombre del Local
+      // Bloque de contenido de la Ventana
+      .css-popup__content(style='background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;', align='center')
+        .css-popup__paragraph.css-popup__layer
+        form.css-popup__paragraph.css-popup__layer
+          p.clasificacion.css-popup__paragraph.css-popup__layer
+            input#radio1(type='radio', name='estrellas', value='5')
+            //
+            label(for='radio1', style='font-size: 50px;') ★
+            //
+            input#radio2(style='font-size: 50px;', type='radio', name='estrellas', value='4')
+            //
+            label(for='radio2', style='font-size: 50px;') ★
+            //
+            input#radio3(style='font-size: 50px;', type='radio', name='estrellas', value='3')
+            //
+            label(for='radio3', style='font-size: 50px;') ★
+            //
+            input#radio4(style='font-size: 50px;', type='radio', name='estrellas', value='2')
+            //
+            label(for='radio4', style='font-size: 50px;') ★
+            //
+            input#radio5(style='font-size: 50px;', type='radio', name='estrellas', value='1')
+            //
+            label(for='radio5', style='font-size: 50px;') ★

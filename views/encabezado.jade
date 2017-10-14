@@ -1,0 +1,285 @@
+doctype html
+html
+    head
+        title Inveniet v2.0
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        script(src='Animaciones/slider.js')
+        link(rel='stylesheet', href='CSS/contenedores.css')
+        link(rel='stylesheet', href='CSS/slider.css')
+        link(rel='stylesheet', href='CSS/Navegacion.css')
+        link(rel='stylesheet', href='CSS/social.css')
+        link(rel='stylesheet', href='CSS/Formas.css')
+        link(rel='stylesheet', href='CSS/Productos.css')
+        link(rel='stylesheet', href='CSS/botonesociales.css')
+        link(rel='stylesheet', href='CSS/Btnsociales.css')
+        link(rel='stylesheet', href='CSS/VentanaModal.css')
+        link(rel='stylesheet', href='CSS/cssModal.css')
+        link(rel='stylesheet', href='CSS/comentario.css')
+        link(rel='stylesheet', href='CSS/btn-flotante.css')
+
+        // Google
+        script(src='https://www.google.com/recaptcha/api.js')
+
+
+          script(type='text/javascript' src=src="https://maps.googleapis.com/maps/api/js?key=flawless-snow-168106back=initMap" async defer=initMap)
+          link(rel="stylesheet", href="/maps/documentation/javascript/demos/demos.css")
+
+        // Boostrap
+        // CSS
+        link(href='CSS/boostrap/bootstrap-theme.min.css', rel='stylesheet')
+        link(href='CSS/boostrap/bootstrap.min.css', rel='stylesheet')
+        // Javascript
+        script(src='CSS/bootstrap4.0/js/bootstrap.min.js')
+        script(src='Animaciones/slider.js')
+        script(src='Animaciones/animacion.js')
+        script(src='Animaciones/vue.min.js')
+        // Flat-UI
+        link(rel='stylesheet', href='CSS/Flat-UI/dist/css/flat-ui.min.css')
+        // hover para las Imagenes
+        link(rel='stylesheet', href='CSS/imagenHover/imagehover.css')
+        // Owl-carrucel
+        link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.carousel.css')
+        link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.theme.default.min.css')
+        script(src='jquery-3.2.0.min.js')
+        script(src='CSS/OwlCarousel/dist/owl.carousel.min.js')
+        // Font Awesome
+        link(rel='stylesheet', href='CSS/font-awesome/css/font-awesome.min.css')
+    
+    body
+      .container(background='/img/fondo1.jpg')
+
+
+
+
+        //Barra de navegación
+        nav.row(class="inline-block", align='left', style='background: white; border: solid 1px #E9E9E9;')
+
+
+            // Logo
+            .col-md-1.col-xs-1(style='margin-left: -20px;')  
+            .col-md-1.col-xs-1(align='center')
+              img.img-responsive(src='img/Logo.png', style='width: 40px; height: 60px;')
+            .col-md-1.col-xs-1(align='center', style='text-align: right; ')
+              h5(style='text-align: center;' href='/') 
+                a(href='/' style='color: black;') Inveniet
+            .col-md-1.col-xs-2
+
+
+
+
+            // Barra de Búsqueda
+            form.col-lg-5.col-xs-3(action='/busp', method='get', autocomplete='off' style='margin-top: 13px;')
+              p   
+              .input-group.input-group-sm.input-group-rounded(style='border-radius: 10px;')
+                input#barra1.form-control(type='text', name="texto", style='text-align: center', placeholder='Ej. nombre del producto')
+                span.input-group-btn
+                  button.btn(type='submit')
+                    span.fui-search
+
+
+
+
+
+            if(Usuario.logeado)
+
+              // botones de cuenta
+
+              // Cuenta de usuario
+              .col-lg-3(align='center' style='margin-top: 13px;')
+                .col-md-2
+                .col-md-5
+                  p
+                  #Cuenta.col-lg-6.col-xs-4
+                    form( action='/cuenta' method='post')
+                      input(name='id' value='#{Usuario.id}' style='text-overflow: none; display: none')
+
+                      input(name='cuenta' value='#{Usuario.cuenta}' style='text-overflow: none; display: none')
+
+                      input(name='action' value='ver_perfil' style='text-overflow: none; display: none')
+                      
+                      button.Btn-user(type='submit', style='margin-right: 20px; width: 100px;') #{Usuario.nombre}
+                
+                .col-lg-5.col-xs-4
+                    //.Circulo(style=' width: 40px ; height: 40px; border: solid 2px #05B120; margin-top: -3px; background: red;')
+                  .row(style='height: 50px;')
+                    p
+                    .boton-flotante(style='margin-top: 800px;')
+                    
+                      form(action='/' method='post')
+
+                        input(name='salir' value='true' style='text-overflow: none; display: none')
+                        
+                        button.F1(style='color:white; font-size: 20px;' type='submit') 
+                          i.fa.fa-times(aria-hidden="true")
+
+                  //
+                    script(text/javascript).
+                      $('.F1').hover(function(){
+                      $('.bbttnn').addClass('animacionVer');
+                                   })
+                      if($('.F1').clicked){
+                        $('.F1').hover(function(){
+                      $('.bbttnn').addClass('animacionVer');
+                                   })
+                      }
+                      $('.boton-flotante').mouseleave(function(){
+                        $('.bbttnn').removeClass('animacionVer');
+                      })
+
+
+
+
+            else
+
+              // Botones de Logeo
+              .col-lg-3.col-xs-4(align='center' style='margin-top: 13px;')
+                p  
+                // Aplicación de ingreso de sesión
+                #Ingresar.col-lg-5.col-xs-4
+                  button#show-modal1.Btn-p(@click='showModal1 = true', type='button', style='margin-right: 20px;') Ingresar
+                  ingresar(v-if='showModal1', @close='showModal1 = false')
+                    h5(class="inline-block", slot='header')
+                      .col-md-3.col-xs-3(align='right')
+                        img.img-responsive(src='img/Logo.png', style='width: 20px; height: 30px;')
+                      .col-md-8.col-xs-8(align='left')
+                        h5(style='color: black;') Inveniet
+                .col-xs-1
+                // Aplicación de selección de cuenta
+                #Registrar.col-lg-5.col-xs-5
+                  button#show-modal.Btn-p(@click='showModal = true', type='button', style='margin-right: 20px;') Registrarse
+                  modal(v-if='showModal', @close='showModal = false')
+                    h5(class="inline-block", slot='header')
+                      .col-md-3.col-xs-3(align='right')
+                        img.img-responsive(src='img/Logo.png', style='width: 20px; height: 30px;')
+                      .col-md-8.col-xs-8(align='left')
+                        h5(style='color: black;') Inveniet
+              p   
+               
+
+        
+        //Ventana Modal Ingresar
+        script#Ingresar-Ventana(type='text/x-template').
+            <transition name="modal">
+              <form class="modal-mask" action="/cuenta" method="post" autocomplete="off">
+                <div class="modal-wrapper">
+                  <div class="modal-container">
+                    <div class="modal-header">
+                      <slot name="header">
+                      Inveniet
+                      </slot>
+                    </div>
+
+                    <div class="modal-body">
+                      <slot name="body">
+                        <input type="text" placeholder="Correo electrónico" id="pass" name="correo" class="input-lg form-control" style="margin-bottom: 15px;" />
+                        <input type="password" placeholder="Contraseña" id="pass" name="pass" class="input-lg form-control" />
+                      
+                        <div class="inline-block" align="left" style="height: 20px; margin-top: 8px; margin-bottom: -8px;">
+                          <input type="radio" style="background: white; outline: none; margin-left: 1px;" id="cuenta" name="cuenta" value="usuario">
+                            <span for="usuario" style="margin-right: 20px; font-size:14px;"> Usuario</span>
+
+                          <input id='action' name='action' value='logeo' style='text-overflow: none; display: none'>
+
+                          <input type="radio" name="cuenta" id="cuenta" value="tienda" style="margin-left: 20px;">
+                            <span for="tienda" style='font-size:14px;'> Tienda</span><br>
+                        </div>    
+                      </slot>
+                    </div>
+                     
+                    <div class="modal-footer">
+                      <slot name="footer">
+                        <div class="row inline-block" align="center">
+                      
+                          <div class="col-md-4 col-xs-4" align="left">
+                            <button type="button" class="Btn-p" @click="$emit('close')">Salir</button>
+                          </div>
+                          
+                          <div class="col-md-8 col-xs-8" align="right">
+                            <button type="submit" class="Btn-p">Iniciar Secsión</button>
+                          </div>
+                      
+                        </div>
+                      </slot>
+                    </div>
+                  
+                  </div>
+                </div>
+              </form>
+            </transition>
+
+        // Aplicación con Vuejs para la ventana (ingresar)
+        script(type='text/javascript').
+          Vue.component('ingresar', {
+            template: '#Ingresar-Ventana'
+            })
+            new Vue({
+            el:'#Ingresar',
+            data: {
+            showModal1: false
+            }
+          })
+          //
+
+
+
+
+
+        // Ventana Modal (Registrar) codigo fuente
+        script#Registrar-Ventana(type='text/x-template').
+          <transition name="modal">
+            <div class="modal-mask">
+              <div class="modal-wrapper">
+                <div class="modal-container">
+                  <div class="modal-header">
+                    <slot name="header">
+                    Inveniet
+                    </slot>
+                  </div>
+
+                  <div class="modal-body">
+                    <slot name="body">
+                      <div class="row inline-block" id="tipo-cuenta">
+                        <a href="regl" id="tienda" class="col-md-5 Btn-p2 col-xs-5" onclick="Tcuenta(tienda)" style="margin-right: 20px; margin-left: 10px; background: white; text-align: center;">
+                          <img src="img/tienda-icono.png" class="img-responsive" alt="">
+                          Tienda
+                        </a>
+
+                        <a href="regu" id="usuario" class="col-md-5 Btn-p2 col-xs-5" style="background: white; text-align: center;">
+                          <img src="img/user-icono.png" class="img-responsive" onmouseover="alert('entraste en el area del contenedor') alt="">
+                          Usuario
+                        </a>
+                      
+                      </div>
+                    </slot>
+                  </div>
+
+                  <div class="modal-footer">
+                    <slot name="footer">
+                      <div class="row" align="center">
+                        <button class="Btn-p" @click="$emit('close')" href="principal.html">regresar</button>
+                      </div>
+                    </slot>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </transition>
+        
+        // Aplicación con Vuejs para la ventana (registrar)
+        script(type='text/javascript').
+          Vue.component('modal', {
+            template: '#Registrar-Ventana'
+            })
+            new Vue({
+            el:'#Registrar',
+            data: {
+            showModal: false
+            }
+          });
+        
+
+
+        
+        block contenido

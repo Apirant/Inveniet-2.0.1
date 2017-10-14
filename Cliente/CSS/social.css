@@ -1,0 +1,29 @@
+.circle-btn
+{
+	color: #546363;
+	background-color:  white;
+	border-color: #15DCD9;
+	margin-right: 15px; 
+	border: solid 2px;
+
+	font-size: 5px;
+	font-weight: bold;
+	font-size: 14pt;
+
+  line-height: 1;
+  border-radius: 80px;
+  padding: 8px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+          transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.circle-btn:hover,
+.circle-btn:focus {
+  outline: none;
+  color: white;
+  border: none;
+  background-color: #26DADC;
+  	font-size: 16pt;
+
+}

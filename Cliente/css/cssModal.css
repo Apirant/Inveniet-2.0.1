@@ -1,0 +1,355 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/*
+ * Demo styles
+ */
+
+@media screen and (min-width: 980px){  
+	
+	html{
+		font-size: 62.5%; 
+	} 
+}  
+  
+@media screen and (min-width: 641px) and (max-width: 980px){
+	html{
+		font-size: 9px;
+	} 
+}
+
+@media screen and (max-width: 640px){
+	html{
+		font-size: 8px;
+	}
+} 
+
+body{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.4rem;
+	color: #000;
+  background-color: #eee;
+}
+
+p{
+	line-height: 1.5;
+	margin-bottom: 1rem;
+}
+
+p:last-of-type{
+	margin-bottom: 0;
+}
+
+.demo{
+	
+  height: 100vh;
+  text-align: center;
+  
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.demo__label{
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+.pseudo-button{
+	
+	width: 200px;
+	display: inline-block;
+  
+  background-color: #fff;
+	transition: background-color .4s ease-out;
+
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 10px 0;
+  
+  
+	font-weight: 700;
+	color: #000;
+}
+
+.pseudo-button:hover, .pseudo-button:focus{
+	background-color: #000;
+	color: #fff
+}
+
+.melnik909{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.melnik909:hover, .melnik909:focus{
+  text-decoration: underline;
+}
+
+/*
+ * Core CSS modal window
+ */
+
+.css-popup{
+
+	width: 100%;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+  z-index: 9999;
+	transform: translateZ(0);
+  
+	display: none;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.css-popup__inner{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 9999;
+}
+
+.state-css-popup{
+	display: none;
+}
+
+.state-css-popup:checked ~ .css-popup{
+	display: block;
+}
+
+.state-css-popup:checked ~ .css-popup .css-popup__layer{
+	animation-fill-mode: both;
+	display: block;
+}
+
+.css-popup__close{
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -9999px;	
+}
+
+/*
+ * Demo Skin for CSS modal window
+ */
+
+.css-popup{
+  background-color: rgba(0, 0, 0, .7);		
+}
+
+.css-popup__inner{
+  width: 80%;
+	max-width: 1200px;
+	padding: 5% 0;	
+}
+
+.state-css-popup:checked ~ .css-popup .css-popup__inner{
+	animation-name: zoomIn;
+	animation-duration: .4s;
+	animation-timing-function: ease-out;
+}
+
+.state-css-popup:checked ~ .css-popup .css-popup__label{
+	animation-name: fadeInUp;
+	animation-duration: .2s;
+	animation-timing-function: ease-out;
+	animation-delay: .6s;
+}
+
+.state-css-popup:checked ~ .css-popup .css-popup__paragraph{
+	animation-name: fadeInUp;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+ }			
+
+.state-css-popup:checked ~ .css-popup .css-popup__paragraph:first-child{
+	animation-delay: 1s;
+}
+				
+.state-css-popup:checked ~ .css-popup .css-popup__paragraph:nth-child(2){
+	animation-delay: 1.5s;
+}
+
+.css-popup__header{
+	position: relative;
+ }
+ 
+ .css-popup__header:after{
+		content: "";
+		display: block;
+		background-color: rgba(0, 0, 0, .8);
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+}
+
+.css-popup__title{
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	
+	font-size: 3.5rem;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.css-popup__layout{
+	background-color: #fff;
+}
+
+.css-popup__content{	
+	padding: 20px;
+}
+
+.css-popup__img{
+	max-width: 100%;
+	height: auto;
+}
+
+.css-popup__close{
+	
+	background: none;
+	border: none;
+	
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 9999;
+	
+	width: 3.5vw;
+	height: 3.5vw;
+ }
+
+ .css-popup__close:before, .css-popup__close:after{
+		
+	content: "";
+	display: block;
+	width: 100%; 		
+	height: .3vw;
+		
+	background-color: #fff;
+	transition: transform .3s ease-in;
+
+	position: absolute;
+	top: 1.75vw; 
+	right: 0;
+}
+	
+.css-popup__close:before{
+	transform: rotate(-45deg) scale(.8);
+}
+	
+.css-popup__close:after{
+	transform: rotate(45deg) scale(.8);
+}
+	
+.css-popup__close:hover:before, .css-popup__close:focus:before{
+	transform: rotate(-45deg) scale(1.2);
+}
+		
+.css-popup__close:hover:after, .css-popup__close:focus:after{
+	transform: rotate(45deg) scale(1.2);
+}	
+	
+.css-popup__close:focus:focus{
+	outline: 2px solid #fff;
+}
+
+@keyframes zoomIn{
+
+	0%{
+		opacity: 0;
+		transform: translate3d(-50%, 0, 0) scale(.3);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate3d(-50%, 0, 0) scale(1); 
+	}
+}
+
+@keyframes fadeInUp{
+
+	0%{
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form button {
+  font-size: 20px;
+}
+
+input[type="radioVM"] {
+  display: none;
+}
+
+buttonp {
+  background: transparent;
+  color: grey;
+  outline: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+
+.star-rating form, buttonp {
+  display: inline-block;
+  color: #95a5a6; /* gris (normal) */
+  transition: color 0.10s;
+}
+.star-rating:hover form, buttonp {
+  color: #00C105; /* amarillo (seleccionado) */
+}
+  .star-rating:hover form, buttonp:hover ~ form, buttonp {
+    color: #95a5a6; /* gris (normal) */
+  }
+
+
+
+buttonp:hover, buttonp:hover ~ buttonp{
+  color: #00C105;
+
+}
+
+input[type="radioVM"]:checked, ~ buttonp{
+	outline: none;
+  	color: orange;
+
+}

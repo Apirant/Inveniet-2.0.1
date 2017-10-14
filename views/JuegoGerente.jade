@@ -1,0 +1,81 @@
+doctype html
+html
+    head
+        title Quien_quiere_ser_gerente
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        script(src='Animaciones/slider.js')
+        link(rel='stylesheet', href='CSS/contenedores.css')
+        link(rel='stylesheet', href='CSS/slider.css')
+        link(rel='stylesheet', href='CSS/Navegacion.css')
+        link(rel='stylesheet', href='CSS/social.css')
+        link(rel='stylesheet', href='CSS/Formas.css')
+        link(rel='stylesheet', href='CSS/Productos.css')
+        link(rel='stylesheet', href='CSS/botonesociales.css')
+        link(rel='stylesheet', href='CSS/Btnsociales.css')
+        link(rel='stylesheet', href='CSS/VentanaModal.css')
+        link(rel='stylesheet', href='CSS/cssModal.css')
+        link(rel='stylesheet', href='CSS/comentario.css')
+        link(rel='stylesheet', href='CSS/btn-flotante.css')
+
+        // Boostrap
+        // CSS
+        link(href='CSS/boostrap/bootstrap-theme.min.css', rel='stylesheet')
+        link(href='CSS/boostrap/bootstrap.min.css', rel='stylesheet')
+        // Javascript
+        script(src='CSS/bootstrap4.0/js/bootstrap.min.js')
+        script(src='Animaciones/slider.js')
+        script(src='Animaciones/animacion.js')
+        script(src='Animaciones/vue.min.js')
+        // Flat-UI
+        link(rel='stylesheet', href='CSS/Flat-UI/dist/css/flat-ui.min.css')
+        // hover para las Imagenes
+        link(rel='stylesheet', href='CSS/imagenHover/imagehover.css')
+        // Owl-carrucel
+        link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.carousel.css')
+        link(rel='stylesheet', href='CSS/OwlCarousel/dist/assets/owl.theme.default.min.css')
+        script(src='jquery-3.2.0.min.js')
+        script(src='CSS/OwlCarousel/dist/owl.carousel.min.js')
+        // Font Awesome
+        link(rel='stylesheet', href='CSS/font-awesome/css/font-awesome.min.css')
+    
+    body
+      .container(style='background: white;')
+        .row(align='center')
+            img.img-responsive(src="img/gerente.png" )
+
+        .row(align='center')
+            .col-md-2
+            .col-md-8
+                span.input-lg.form-control(placeholder=' ' style='border-radius: 20px; margin-bottom: 30px; color: #3C1E6B;') {pregunta.question}
+            
+        .row(align='center')
+            .col-md-2
+            .col-md-8
+                .col-md-5
+                    button.Btn-g(type='text' style='width: 100%; border-radius: 20px; margin-bottom: 30px;') opcion A
+                
+                .col-md-2
+
+                .col-md-5
+                    button.Btn-g(type='text' style='width: 100%; border-radius: 20px; margin-bottom: 30px;') opcion B
+
+        .row(align='center' style='margin-bottom: 30px;')
+            .col-md-2
+            .col-md-8
+                .col-md-5
+                    button.Btn-g(type='text' style='width: 100%; border-radius: 20px;' name='hola') opcion C
+                
+                .col-md-2
+
+                .col-md-5
+                    button.Btn-g(type='text' style='width: 100%; border-radius: 20px;') opcion D
+
+
+
+        .row(align='center')
+            p Esta jugando #{gerente.nombre}
+
+
+
+

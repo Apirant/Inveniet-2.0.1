@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+		
+		<title>Ficha de producto</title>
+
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+			<script src="Animaciones/slider.js"></script>
+
+			<link rel="stylesheet" href="CSS/contenedores.css">
+			<link rel="stylesheet" href="CSS/slider.css">
+			<link rel="stylesheet" href="CSS/Navegacion.css">
+			<link rel="stylesheet" href="CSS/social.css">
+			<link rel="stylesheet" href="CSS/Formas.css">
+			<link rel="stylesheet" type="text/css" href="CSS/cssModal.css">
+			<link rel="stylesheet" type="text/css" href="CSS/comentario.css">
+			 
+			<!-- Boostrap -->
+
+				<!-- CSS -->
+					<link href="CSS/boostrap/bootstrap-theme.min.css" rel="stylesheet">
+					<link href="CSS/boostrap/bootstrap.min.css" rel="stylesheet">
+
+				<!-- Javascript-->
+							<script src="CSS/bootstrap4.0/js/bootstrap.min.js"></script>
+							<script src="Animaciones/slider.js"></script>
+							<script src="Animaciones/animacion.js"></script>
+							<script src="Animaciones/vue.min.js"></script>
+			
+			<!--Flat-UI-->
+			<link rel="stylesheet" href="CSS/Flat-UI/dist/css/flat-ui.min.css">
+
+		<!-- Botones sociales -->
+		   	  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		      <link rel="stylesheet" href="CSS/Awesome/style.css">
+</head>
+
+<body>
+
+	<div class="container" align="center">
+
+		<!-- Barra de navegación -->
+				<nav class="row" align="left" style="background: white; border: solid 1px #E9E9E9;">
+					
+					<!-- Logo -->
+				
+						<div class="col-md-1" style="margin-left: -20px;"> </div>
+
+						<div class="col-md-1" align="center">
+							<img src="img/logoFinal.png" class="img-responsive" style="width: 40px; height: 60px;" >	
+						</div>
+
+						<div class="col-md-1" align="center" style="text-align: right; ">
+							<h5 style="text-align: center;" >Inveniet</h5>
+						</div>
+						
+						<div class="col-md-1"></div>
+
+					<!-- Barra de Búsqueda -->
+						<div class="col-lg-5">
+							<p>  </p>
+								<div class="input-group input-group-sm input-group-rounded" style="border-radius: 10px;">
+
+										<span class="input-group-btn ">
+											<a type="submit" class="btn" href="BuscarP.html"><span class="fui-search"></span></a>
+										</span>
+
+									<input type="text" class="form-control" style="text-align: left" placeholder="Ej. nombre del producto" id="barra1">
+								</div>
+
+							</div>
+
+					<!-- Botones de Logeo -->
+						<div class="col-lg-3" align="center">
+							<p> </p>
+							<a type="button" class="Btn-p" href="principal.html"  style="margin-right: 20px;">Ingresar</a>
+							<a type="button" class="Btn-p" href="RegSeleccionar.html">Registrar</a>
+						</div>
+
+
+
+
+				</nav>
+
+		<!-- Identificador -->
+			<div class="row" style="height: 30px; background: #8E8C8C; color: white;">
+					<p align="center" style="margin-top: 1px; font-size: 18px;">Datos del Producto</p>
+			</div>
+
+		<!-- Datos del producto -->
+			<div class="row">
+					<div class="col-md-1"> </div>
+			
+			<!-- Columna izquierda -->
+
+				<div class="col-md-5" style="margin-left: 20px;">
+					<div class="separador-top-sm"></div>
+
+					<p align="left" style="margin-top: 5px; font-size: 18px;">Información del producto:</p>
+					<div class="separador-top-sm"></div>
+
+						<div class="row">
+
+							<div class="col-md-7">
+								<img src="img/Imagen_prod.png" class="img-responsive" style="height: 230px">
+							</div>
+
+							<div class="col-md-5">
+									<p> </p>
+									<span class="form-control">Nombre del Producto</span>
+
+									<p> </p>
+									<span class="form-control">Precio</span> 
+
+									<p> </p>
+									<span class="form-control">Nombre del Local</span> 
+
+									<p> </p>
+									<span class="form-control">Tipo de Local</span> 
+									
+							</div>
+						</div>
+						
+						<p>  </p>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="separador-top-sm"></div>
+
+								<span class="form-control">Descripcion del local</span> 
+								
+							</div>
+							
+						</div>
+
+
+
+						<div class="row">
+								<div class="separador-top-sm"></div>
+
+								<div class="col-md-5">
+									<span class="form-control">Reputacion: 0</span> 
+								</div>
+
+								<div class="separador-top-sm"></div>
+
+								<div class="col-md-7">
+									<span class="form-control">Publicado hace: XX min</span> 
+								</div>
+
+						</div>
+
+						<div class="row">
+						
+						<div class="separador-top-sm"></div>
+
+							<div class="col-md-5" align="left"> 
+								
+
+								<a type="buttom" class="btn btn-sm btn-primary" href="BuscarProductos.html" style="width: 180px; background: #00BD1C; color: white; margin-top: 1px; font-size: 16px;">Mas vendedores</a>
+							</div>
+
+							<div class="col-md-2" align="center">
+								
+								<button type="button" class="btn" style="background: white; margin-top: -2px;">
+									<img src="img/compartir.png"  type="button">
+								</button>
+							</div>
+
+							<div class="col-md-5" align="right"> 
+
+										 
+										  <label for="cb" type="buttom" role="button" class="btn btn-sm btn-primary pseudo-button" href="#" style="width: 200px; background: #E8860D; color: white; margin-top: 5px; font-size: 16px; text-align: center">Ver comentarios </label>
+										  
+								    	<input id="cb" class="state-css-popup" type="checkbox">
+ 	
+
+
+									 	<div class="css-popup" tabindex="-1">
+											
+											<label for="cb" class="css-popup__close" role="button"></label>
+											
+											<div class="css-popup__inner css-popup__layer">
+
+												<!-- Ventana Emergente -->
+
+													<div class="css-popup__layout">
+
+														<!-- Cabecera de la Ventana Modal -->
+
+															<div class="css-popup__header">
+																
+																<img src="img/cam.png" class="css-popup__img" alt="Title popup">
+																
+																<h3 class="title title_large css-popup__title">
+														            <span class="css-popup__layer css-popup__label">Nombre del Local</span>
+														          </h3>
+
+															</div>
+
+														<!-- Bloque de contenido de la Ventana -->
+															<div class="css-popup__content" style="background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;" >
+
+																<!-- Contenedor Principal  Comentarios-->
+																	<div class="comments-container css-popup__paragraph css-popup__layer" style="margin-top: -10px;">
+																		<h6>Comentarios</h6>
+
+																		<ul id="comments-list" class="comments-list">
+																			<li>
+																				<div class="comment-main-level">
+																					<!-- Avatar -->
+																					<div class="comment-avatar" style="border-radius: 50px; border: 1px solid #FFFF; margin-top: -15px;"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""></div>
+																					<!-- Contenedor del Comentario -->
+																					<div class="comment-box">
+																						<div class="comment-head">
+																							<h8 class="comment-name">Agustin Ortiz</h8>
+																							<span>hace 20 minutos</span>
+																							<i class="fa fa-heart"></i>
+
+																						</div>
+																						<div class="comment-content">
+																							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+																						</div>
+																					</div>
+																				</div>
+
+																			</li>
+
+																			<li>
+																				<div class="comment-main-level">
+																					<!-- Avatar -->
+																					<div class="comment-avatar"  style="border-radius: 50px; border: 1px solid #FFFF; margin-top: -15px;"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""></div>
+																					<!-- Contenedor del Comentario -->
+																					<div class="comment-box">
+																						<div class="comment-head">
+																							<h8 class="comment-name">Lorena Rojero</h8>
+																							<span>hace 10 minutos</span>
+																							<i class="fa fa-heart"></i>
+																						</div>
+																						<div class="comment-content">
+																							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																		</ul>
+																	</div>
+
+
+																<form method="post" action="" class="css-popup__paragraph css-popup__layer" >
+
+																	<div class="row" align="center">
+																		<div class="col-md-offset-1 col-md-1">
+																			<ul id="comments-list" class="comments-list">
+																			<div class="comment-main-level">
+																			<div class="comment-avatar"  style="border-radius: 50px; border: 1px solid #FFFF; margin-top: -35px;"><img src="img/img-usuario.png" alt=""></div>
+																			</div>
+																			</ul>
+																		</div>
+
+																		<div class="col-md-8" style="margin-left: 20px;" align="center">
+																		
+																		 <textarea class="form-control" name="correo" id="correo" placeholder=""> Escribe tu comentario</textarea>
+																		 
+																		  
+																		</div>
+
+																		<div class="col-md-1 ">
+																			<input type="submit"  class="Btn-user" style="margin-top: 5px; width: auto; height: 58px; margin-left: -1px; " value="publicar" placeholder="enviar" />
+																		</div>
+
+																		
+																	</div>
+
+
+																</form>
+
+															</div>
+
+													</div>
+											
+											</div>
+
+										</div> 	
+
+							</div>
+						</div>
+
+				</div>
+
+			<!-- Columna derecha -->
+
+				<div class="col-md-5" align="right">
+					<div class="separador-top-sm"></div>
+
+
+										  <label for="b" type="buttom" role="button" class="btn btn-sm btn-primary pseudo-button" href="#" style="width: 200px; background: #2B6F7C; color: white; margin-top: 5px; font-size: 16px; text-align: center">Calificar Local </label>
+										  
+								    	<input id="b" class="state-css-popup" type="checkbox">
+ 	
+
+
+									 	<div class="css-popup" tabindex="-1">
+											
+											<label for="b" class="css-popup__close" role="button"></label>
+											
+											<div class="css-popup__inner css-popup__layer">
+
+												<!-- Ventana Emergente -->
+
+													<div class="css-popup__layout">
+
+														<!-- Cabecera de la Ventana Modal -->
+
+															<div class="css-popup__header">
+																
+																<img src="http://stas-melnikov.ru/cliparts/tablet4_1200x470.jpg" class="css-popup__img" alt="Title popup">
+																
+																<h3 class="title title_large css-popup__title">
+														            <span class="css-popup__layer css-popup__label">Nombre del Local</span>
+														          </h3>
+
+															</div>
+
+														<!-- Bloque de contenido de la Ventana -->
+															<div class="css-popup__content" style="background: #EEEEEE; margin-top: -10px; margin-bottom: 500px;"  align="center" >
+
+																<div class="css-popup__paragraph css-popup__layer" ></div>
+
+																<form class="css-popup__paragraph css-popup__layer" >
+																  <p class="clasificacion css-popup__paragraph css-popup__layer">
+																    <input id="radio1" type="radio" name="estrellas" value="5"><!--
+																    --><label for="radio1" style="font-size: 50px;">★</label><!--
+																    --><input id="radio2" style="font-size: 50px;" type="radio" name="estrellas" value="4"><!--
+																    --><label for="radio2" style="font-size: 50px;">★</label><!--
+																    --><input id="radio3" style="font-size: 50px;" type="radio" name="estrellas" value="3"><!--
+																    --><label for="radio3" style="font-size: 50px;">★</label><!--
+																    --><input id="radio4"style="font-size: 50px;" type="radio" name="estrellas" value="2"><!--
+																    --><label for="radio4" style="font-size: 50px;">★</label><!--
+																    --><input id="radio5" style="font-size: 50px;" type="radio" name="estrellas" value="1"><!--
+																    --><label for="radio5" style="font-size: 50px;">★</label>
+																  </p>
+																</form>
+															</div>	
+
+														
+
+													</div>
+											
+											</div>
+
+										</div> 	
+
+
+					<div class="separador-top-sm"></div>
+
+					<div style="width: auto; margin-top: 5px; height: 190px; border: solid 1px #A6A6A6; align-content: center; text-align: center;">
+						Mapa de google
+						<img src="img/mapa.png">
+					</div>
+
+					<div class="separador-top-sm"></div>
+
+					<p align="left" style="margin-top: 5px; font-size: 18px; text-align: right;">Información del producto:</p>
+					
+
+					<div style="margin-top: 5px; width: auto; height: 120px; /*border: solid 1px #CACACA;*/">
+						<p> </p>
+						<span class="form-control">Direcci'on del Local</span>
+						
+						<div class="separador-top-sm"></div>
+						<span class="form-control">Telefono del Local</span>
+
+						<div class="separador-top-sm"></div>
+						<span class="form-control">Email del Local</span>
+					</div>
+					
+				</div>
+	
+			</div>
+		
+		<!-- Lista de derechos de autor -->
+			<div class="row" >
+
+				<div class="separador-top-sm"></div>
+				
+				<div  style="background: #08292F; color: white; text-align: center; margin-top: 20px;">
+					<span>Todos los derechos reservados</span>
+				</div>
+				
+			</div>
+	
+	</div>
+
+
+
+
+
+
+</body>
+
+</html>

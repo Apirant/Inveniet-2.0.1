@@ -1,0 +1,131 @@
+
+.M-container
+{
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: center;
+}
+
+/* Contenedor de la barra de navegación */
+.nav-container
+{
+	width: 100%;
+	height: 80px;
+	margin-left: 1px;
+	margin-right: 1px;
+	position: relative;
+}
+
+
+/* Contenedor del Slide*/
+
+.slide-container
+{
+	width: 80%;
+	height: 500px;
+	margin: auto;
+	margin-top: 5%;
+	top: 2000px;
+}
+
+.social-container
+{
+	width: 40%;
+	height: 20%;
+	margin:auto;
+	margin-top: 2%;
+	position: relative;
+}
+
+.Stadist-container
+{
+	width: 100%;
+	height: 20%;
+	margin: auto;
+	margin-left: 5px;
+	margin-right: 8px;
+	position: relative;
+	align-items: center;
+	margin-top: 10%;
+
+}
+
+
+.nav-container>.Membrete
+{
+	width: 30%;
+	height: 30%;
+	float: left;
+	display: inline-block;
+}
+
+.nav-stadist>.stadist
+{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	position: relative;
+	border: solid 1px #E4E2E5;
+	display: inline-block;
+}
+
+
+.stadist:hover,
+.stadist:focus {
+  outline: none;
+  color: #8709C6;
+  border: solid 1px #8709C6;
+  background-color: white;
+
+  	font-size: 16pt;
+
+}
+
+
+
+
+.stadist3:hover,
+.stadist3:focus {
+  outline: none;
+  color: #3CB93F;
+  border: solid 1px #3CB93F;
+  background-color: white;
+
+  	font-size: 16pt;
+
+}
+
+.num
+{
+	font-size: 5px;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+
+.etiqueta
+{
+	font-size: 5px;
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+.nav-stadist
+{
+	width: 60%;
+	height: 100px;
+	background: white;
+	box-shadow: 20px 15px 15px -5px rgba(0,0,0,0.1);
+	position: relative;
+}
+
+
+
+
+
+.center
+{
+ margin-left: 2%;
+ margin-right: 2%;
+}

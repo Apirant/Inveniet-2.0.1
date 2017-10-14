@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Perfil de Usuario</title>
+
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+			<script src="Animaciones/slider.js"></script>
+
+			<link rel="stylesheet" href="CSS/contenedores.css">
+			<link rel="stylesheet" href="CSS/slider.css">
+			<link rel="stylesheet" href="CSS/Navegacion.css">
+			<link rel="stylesheet" href="CSS/social.css">
+			<link rel="stylesheet" href="CSS/Formas.css">
+			 <link rel="stylesheet" href="CSS/Formulario.css">
+			<!-- Boostrap -->
+
+				<!-- CSS -->
+					<link href="CSS/boostrap/bootstrap-theme.min.css" rel="stylesheet">
+					<link href="CSS/boostrap/bootstrap.min.css" rel="stylesheet">
+
+				<!-- Javascript-->
+							<script src="CSS/bootstrap4.0/js/bootstrap.min.js"></script>
+							<script src="Animaciones/slider.js"></script>
+							<script src="Animaciones/animacion.js"></script>
+							<script src="Animaciones/vue.min.js"></script>
+			
+			<!--Flat-UI-->
+			<link rel="stylesheet" href="CSS/Flat-UI/dist/css/flat-ui.min.css">
+
+		<!-- Botones sociales -->
+		   	  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		      <link rel="stylesheet" href="CSS/Awesome/style.css">
+		
+		</head>
+
+
+<body>
+
+	<div  class="container" style="background: white;">
+
+	<!-- Barra de navegación -->
+				<nav class="row" align="left" style="background: white; border: solid 1px #E9E9E9;">
+					
+					<!-- Logo -->
+				
+						<div class="col-md-1" style="margin-left: -20px;"> </div>
+
+						<div class="col-md-1" align="center">
+							<img src="img/logoFinal.png" class="img-responsive" style="width: 40px; height: 60px;" >	
+						</div>
+
+						<div class="col-md-1" align="center" style="text-align: right; ">
+							<h5 style="text-align: center;" >Inveniet</h5>
+						</div>
+						
+						<div class="col-md-1"></div>
+
+					<!-- Barra de Búsqueda -->
+						<div class="col-lg-5">
+							<p>  </p>
+								<div class="input-group input-group-sm input-group-rounded" style="border-radius: 10px;">
+
+										<span class="input-group-btn ">
+											<a type="submit" class="btn" href="BuscarP.html"><span class="fui-search"></span></a>
+										</span>
+
+									<input type="text" class="form-control" placeholder="Ej. nombre del producto" id="barra1">
+								</div>
+
+							</div>
+
+				<!-- botones de cuenta -->
+
+					<!-- Cuenta de usuario -->
+						<div class="col-lg-3" align="center">
+
+							<div class="col-md-6 ">
+								<p> </p>
+								<a type="button" class="Btn-user" href="perfilUsuario.html" id="cuenta">Nombre_Cuenta</a>
+							</div>
+
+								
+
+							<div class="col-md-3"> 
+								<div class="circulo" style=" width: 40px ; height: 40px; border: solid 2px #05B120; margin-top: 10px;">
+									<img src="img/Imag.png" class="img-responsive" >
+								</div>
+
+							</div>
+						</div>
+
+					</nav>
+
+	
+	<!-- Identificador -->
+			<div class="row" style="height: 30px; background: #1C5674; color: white;">
+					<p align="center" style="margin-top: 1px; font-size: 18px;">Perfil de Usuario</p>
+			</div>
+			
+		<!--Formularios -->	
+
+			<div class="row">
+				
+				<div class="col-md-1"> </div>
+
+				<div class="col-md-5">
+
+						<div class="separador-top-sm"></div>
+						
+					<span class="sub " align="left">Datos Personales:</span>
+							
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="text" placeholder="Nombre" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+					<div class="row" align="center">
+						<div class="col-lg-10">
+							<input type="text" placeholder="Apellido" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+										<div class="row">
+						<div class="col-lg-10">
+
+							<div class="input-group">
+							  <input type="text" class="form-control" placeholder="Email" />
+							  <span class="input-group-addon">@ gmail.com</span>
+							</div>
+
+						</div>
+					</div>
+					
+							<div class="separador-top-sm"></div>
+							
+					<span class="sub " align="left">Datos de la Cuenta:</span>
+					
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="text" placeholder="Nombre de Usuario" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+					<div class="row">
+						<div class="col-lg-10">
+							<input type="text" placeholder="Contraseña" class="input-lg form-control" />
+						</div>
+					</div>	
+							<div class="separador-top-sm"></div>
+
+	
+
+				</div>
+
+
+				<div class="col-md-5">
+
+						<div class="separador-top-sm"></div>
+
+					<span class="sub" style="text-align: right">Verificación de seguridad:</span>
+							
+						<div class="separador-top-sm"></div>
+						
+						<div class="row" align="center">
+
+						<div class="col-md-1"> </div>
+
+
+							<div class="col-lg-10">
+
+								<div class="col-lg-20  codigoQR" align="center" style="background: white; height: 390px;">
+									<img src="img/imagen-logo-U.jpg" class="img-responsive" alt="">
+								</div>
+									
+										<div class="separador-top-sm"></div>
+
+								<!-- Botones -->	
+									<div class="row" style="margin-top: 50px;" align="center">
+										
+										<div class="col-md-8" align="center">
+												<input type="file" id="Imagen_Subir" class="btn btn-inverse" name="Cargar Imagen">
+
+								            </div>
+									</div>
+						
+								</div>
+						</div>
+
+
+					</div>	
+
+			</div>
+
+		<!-- botones de Guardado -->
+
+			<div class="row" align="center">
+
+				<button type="button" class="Btn-p">Salir</button>
+
+				<button type="button" class="Btn-p">Guardar</button>
+
+
+				
+			</div>
+
+		<div class="separador-top-sm" style="margin-bottom: -80px"></div>
+
+		<!-- Lista de derechos de autor -->
+			<div class="row"  align="center">
+
+				<div style="background: #08292F; color: white; text-align: center; ">
+					<span>Todos los derechos reservados</span>
+				</div>
+				
+			</div>
+
+	</div>
+
+
+</body>
+
+</html>

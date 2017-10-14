@@ -1,0 +1,30 @@
+{
+  "name": "inveniet2.0.1",
+  "description": "tienda online",
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb"
+  ],
+  "version": "2.0.0",
+  "private": false,
+  "author": "Eurfran M. Omar G.",
+  "license": "MIT",
+  "scripts": {
+    "start": "./Servidor/server.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "~4.15.0",
+    "express-session": "~1.15.0",
+    "jade": "~1.11.0",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.4",
+    "morgan": "~1.8.0",
+    "mpromise": "^0.5.5",
+    "multer": "^1.3.0",
+    "vue": "^2.2.6"
+  },
+  "devDependencies": {}
+}
